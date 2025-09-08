@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="navbar.css">
+    <script src="script.js" ></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="Federal_Police_Commission_of_Ethiopia_Coat_of_Arms_and_Logo.jpg" alt="Logo">
+                </div>
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="index.html" class="nav-item">
+                    <i class="fas fa-folder-open"></i>
+                    <span>Cases</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Reports</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-tasks"></i>
+                    <span>Progress Tracking</span>
+                </a>
+            </nav>
+            
+        </aside>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <!-- Navbar -->
+            <nav class="navbar">
+                <div class="navbar-left">
+                    <button class="menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+                
+                <div class="navbar-center">
+                    <div class="search-container">
+                        <input type="text" class="search-input" placeholder="Search here">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+                </div>
+                
+                <div class="navbar-right">
+                    <div class="notification-container">
+                        <i class="fas fa-bell notification-icon"></i>
+                        <span class="notification-badge"></span>
+                    </div>
+                    
+                    <div class="language-selector">
+                        <i class="fas fa-globe"></i>
+                        <span>English</span>
+                    </div>
+                    
+                    <div class="user-profile">
+                        <i class="fas fa-user-circle"></i>
+                        <span>User</span>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Page Content -->
+            <main class="page-content">
+               <div class="welcome-header"><h2>Welcome Back, Custodia Officer</h2>
+                <h3>Ethiopia Federal Police Forensic Management System</h3>
+            </div> 
+                <!-- Dashboard Stats Cards -->
+               <!-- Dashboard Stats Cards -->
+<div class="stats-cards">
+    <div class="stat-card blue">
+        <i class="fas fa-briefcase-medical card-icon"></i>
+        <h3>1k</h3>
+        <p>Total Case</p>
+    </div>
+    <div class="stat-card orange">
+        <i class="fas fa-hourglass-half card-icon"></i>
+        <h3>300</h3>
+        <p>Pending Assignment</p>
+    </div>
+    <div class="stat-card green">
+        <i class="fas fa-check-circle card-icon"></i>
+        <h3>5</h3>
+        <p>Completed Case</p>
+    </div>
+    <div class="stat-card yellow">
+        <i class="fas fa-user-check card-icon"></i>
+        <h3>8</h3>
+        <p>Assigned Case</p>
+    </div>
+    <div class="stat-card purple">
+        <i class="fas fa-user-tie card-icon"></i>
+        <h3>3</h3>
+        <p>Active Investigator</p>
+    </div>
+</div>
+
+            
+                <!-- Case List Table -->
+                <div class="case-list">
+                    <h3>Recent Case List</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Case ID</th>
+                                <th>Description</th>
+                                <th>Source</th>
+                                <th>Type</th>
+                                <th>Quantity</th>
+                                <th>Status</th>
+                                <th>Assigned To</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>CSE-2024-001</td>
+                                <td>Fingerprint Analysis</td>
+                                <td>Police Station</td>
+                                <td>Fingerprint Investigation</td>
+                                <td>2</td>
+                                <td><span class="status inlab">In Lab</span></td>
+                                <td>Dr. Tadesse</td>
+                            </tr>
+                            <tr>
+                                <td>CSE-2024-002</td>
+                                <td>DNA Analysis</td>
+                                <td>Court</td>
+                                <td>Biology Investigation</td>
+                                <td>2</td>
+                                <td><span class="status assigned">Assigned</span></td>
+                                <td>Ato Girma</td>
+                            </tr>
+                            <tr>
+                                <td>CSE-2024-003</td>
+                                <td>Document Forensics</td>
+                                <td>Police Station</td>
+                                <td>Biology Investigation</td>
+                                <td>1</td>
+                                <td><span class="status completed">Completed</span></td>
+                                <td>Dr. Tadesse</td>
+                            </tr>
+                            <tr>
+                                <td>CSE-2024-004</td>
+                                <td>DNA Analysis</td>
+                                <td>Court</td>
+                                <td>Document Investigation</td>
+                                <td>3</td>
+                                <td><span class="status inlab">In Lab</span></td>
+                                <td>Dr. Meron</td>
+                            </tr>
+                            <tr>
+                                <td>CSE-2024-005</td>
+                                <td>Document Forensics</td>
+                                <td>Court</td>
+                                <td>Document Investigation</td>
+                                <td>4</td>
+                                <td><span class="status assigned">Assigned</span></td>
+                                <td>Ato Girma</td>
+                            </tr>
+                            <tr>
+                                <td>CSE-2024-006</td>
+                                <td>Document Forensics</td>
+                                <td>Police Station</td>
+                                <td>Chemistry Investigation</td>
+                                <td>1</td>
+                                <td><span class="status completed">Completed</span></td>
+                                <td>Dr. Meron</td>
+                            </tr>
+                            <tr>
+                                <td>CSE-2024-007</td>
+                                <td>DNA Analysis</td>
+                                <td>Court</td>
+                                <td>Document Investigation</td>
+                                <td>1</td>
+                                <td><span class="status inlab">In Lab</span></td>
+                                <td>Ato Girma</td>
+                            </tr>
+                            <tr>
+                                <td>CSE-2024-008</td>
+                                <td>Fingerprint Analysis</td>
+                                <td>Police Station</td>
+                                <td>Biology Investigation</td>
+                                <td>2</td>
+                                <td><span class="status completed">Completed</span></td>
+                                <td>Dr. Tadesse</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="pagination">
+                        <buttuon class="page-btn next">&lt;</buttuon>
+                        <button class="page-btn active">1</button>
+                        <button class="page-btn">2</button>
+                        <button class="page-btn">3</button>
+                        <button class="page-btn">4</button>
+                        <button class="page-btn">5</button>
+                        <button class="page-btn next"> &gt;</button>
+                    </div>
+                </div>
+            </main>
+            
+        </div>
+    </div>
+</body>
+</html>
