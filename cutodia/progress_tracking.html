@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Tracking - Federal Police</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="progess_tracking.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="logo-container">
+            <div class="logo">
+                <img src="Federal_Police_Commission_of_Ethiopia_Coat_of_Arms_and_Logo-removebg-preview.png"alt="ethiopia federal police logo">
+            </div>
+        </div>
+        
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="case.html" class="nav-item">
+                <i class="fas fa-folder"></i>
+                <span>Cases</span>
+            </a>
+            <a href="reports.html" class="nav-item">
+                <i class="fas fa-chart-bar"></i>
+                <span>Reports</span>
+            </a>
+            <a href="#" class="nav-item active">
+                <i class="fas fa-tasks"></i>
+                <span>Progress Tracking</span>
+            </a>
+            <a href="#" class="nav-item logout">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Logout</span>
+            </a>
+        </nav>
+    </aside>
+
+    <div class="main-content">
+        <nav class="navbar">
+            <div class="navbar-left">
+                <!-- Menu toggle removed -->
+            </div>
+            
+            <div class="navbar-center">
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Search here">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+            </div>
+            
+            <div class="navbar-right">
+                <div class="notification-container">
+                    <i class="fas fa-bell notification-icon"></i>
+                    <span class="notification-badge"></span>
+                </div>
+                
+                <div class="language-selector">
+                    <i class="fas fa-globe"></i>
+                    <span>English</span>
+                </div>
+                
+                <div class="user-profile">
+                    <i class="fas fa-user-circle"></i>
+                    <span>User</span>
+                </div>
+            </div>
+        </nav>
+
+        <div class="content">
+            <div class="page-header">
+                <h1>Progress Tracking</h1>
+                <div class="breadcrumb">Real Time Progress Tracking</div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card active-cases">
+                    <div class="stat-icon">
+                        <i class="fas fa-folder-open"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-value">23</div>
+                        <div class="stat-label">Active Cases</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card in-progress">
+                    <div class="stat-icon">
+                        <i class="fas fa-spinner"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-value">15</div>
+                        <div class="stat-label">In Progress</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card completed">
+                    <div class="stat-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-value">8</div>
+                        <div class="stat-label">Completed</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card overdue">
+                    <div class="stat-icon">
+                        <i class="fas fa-exclamation-circle"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-value">2</div>
+                        <div class="stat-label">Overdue</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="search-filter-section">
+                <div class="search-input-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search by case ID, title, or investigator...">
+                </div>
+                
+                <div class="filter-container">
+                    <i class="fas fa-filter"></i>
+                    <select class="status-filter">
+                        <option value="all">All Status</option>
+                        <option value="active">Active</option>
+                        <option value="in-progress">In Progress</option>
+                        <option value="completed">Completed</option>
+                        <option value="overdue">Overdue</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="case-details">
+                <div class="case-header">
+                    <h2>CSE-2024-001: Fingerprint Analysis - Bank Robbery</h2>
+                    <div class="case-id">Case ID: CSE-2024-001</div>
+                </div>
+
+                <div class="investigator-info">
+                    <div class="investigator-name">Q. D. Todesze Alemu</div>
+                    <div class="investigator-department">Fingerprint Investigation</div>
+                    <div class="expected-date">Expected: 1/25/2024</div>
+                </div>
+
+                <div class="progress-section">
+                    <h3>Overall Progress</h3>
+                    <div class="current-stage">Current Stage: Analysis Complete</div>
+                    
+                    <div class="progress-bar-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 90%;"></div>
+                        </div>
+                        <div class="progress-percentage">90%</div>
+                    </div>
+                    
+                    <div class="progress-status">IN LAB</div>
+                </div>
+
+                <div class="timeline-section">
+                    <h3>Investigation Timeline</h3>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item completed">
+                            <div class="timeline-content">
+                                <div class="timeline-title">Case Registered</div>
+                                <div class="timeline-by">By Sirin Mekreven</div>
+                                <div class="timeline-date">1/15/2024 at 1:30:00 PM</div>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item completed">
+                            <div class="timeline-content">
+                                <div class="timeline-title">Assigned to Investigator</div>
+                                <div class="timeline-by">By Sirin Mekreven</div>
+                                <div class="timeline-date">1/15/2024 at 3:20:00 PM</div>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item completed">
+                            <div class="timeline-content">
+                                <div class="timeline-title">Evidence Received</div>
+                                <div class="timeline-by">By Dr. Todesze Alemu</div>
+                                <div class="timeline-date">1/16/2024 at 12:13:00 PM</div>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item completed">
+                            <div class="timeline-content">
+                                <div class="timeline-title">Analysis Started</div>
+                                <div class="timeline-by">By Dr. Todesze Alemu</div>
+                                <div class="timeline-date">1/18/2024 at 2:00:00 PM</div>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item completed">
+                            <div class="timeline-content">
+                                <div class="timeline-title">Analysis Complete</div>
+                                <div class="timeline-by">By Dr. Todesze Alemu</div>
+                                <div class="timeline-date">1/20/2024 at 7:30:00 PM</div>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item current">
+                            <div class="timeline-content">
+                                <div class="timeline-title">Report Generation</div>
+                                <div class="timeline-by">By Dr. Todesze Alemu</div>
+                                <div class="timeline-date">In Progress</div>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item upcoming">
+                            <div class="timeline-content">
+                                <div class="timeline-title">Review & Approval</div>
+                                <div class="timeline-by">By Doremans Head</div>
+                                <div class="timeline-date">Not Started</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="progress_tracking.js"></script>
+    <script src="logout.js"></script>
+</body>
+</html>
