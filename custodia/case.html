@@ -308,16 +308,16 @@
             
             <div class="form-row">
                 <div class="form-group">
-                    <label for="mainDepartment">Main Department</label>
+                    <label for="mainDepartment">Department</label>
                     <select id="mainDepartment" required onchange="updateMainClass()">
-                        <option value="">Select Main Department</option>
+                        <option value="">Select Department</option>
                         <option value="forensic">Forensic Laboratory Department</option>
                         <option value="crime">Crime Area Investigation Department</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="mainClass">Main Class</label>
-                    <select id="mainClass" required onchange="updateClass()" disabled>
+                    <select id="mainClass" required onchange="updateLaboratory()" disabled>
                         <option value="">Select Main Class</option>
                         <!-- Options will be populated by JavaScript -->
                     </select>
@@ -326,9 +326,9 @@
             
             <div class="form-row">
                 <div class="form-group">
-                    <label for="class">Class</label>
-                    <select id="class" required disabled>
-                        <option value="">Select Class</option>
+                    <label for="laboratory">Laboratory</label>
+                    <select id="laboratory" required disabled>
+                        <option value="">Select Laboratory</option>
                         <!-- Options will be populated by JavaScript -->
                     </select>
                 </div>
@@ -350,9 +350,8 @@
         </form>
     </div>
 </div>
-   
 
-    <script src="case.js"></script>
+<script src="case.js"></script>
 <script src="logout.js"></script>
 </body>
 </html>

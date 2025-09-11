@@ -27,7 +27,7 @@ body {
     overflow: hidden;
 }
 
-/* Sidebar Styles */
+/* Sidebar Styles - Fixed full height */
 .sidebar {
     width: 250px;
     background: linear-gradient(180deg, rgb(7, 40, 80) 0%, #1a365d 100%);
@@ -273,23 +273,19 @@ body {
     color: white;
 }
 
-.stat-card.total-core {
+.stat-card.active-cases {
     background: linear-gradient(135deg, #4e73df 0%, #224abe 100%);
 }
 
-.stat-card.pending {
-    background: linear-gradient(135deg, #f6c23e 0%, #dda20a 100%);
-}
-
-.stat-card.completed {
+.stat-card.in-progress {
     background: linear-gradient(135deg, #1cc88a 0%, #13855c 100%);
 }
 
-.stat-card.assigned {
+.stat-card.completed {
     background: linear-gradient(135deg, #36b9cc 0%, #258391 100%);
 }
 
-.stat-card.investigators {
+.stat-card.overdue {
     background: linear-gradient(135deg, #e74a3b 0%, #be2617 100%);
 }
 
@@ -320,26 +316,18 @@ body {
     opacity: 0.9;
 }
 
-/* Dashboard Content Layout */
-.dashboard-content {
-    display: block;
-}
-
-.dashboard-full {
-    width: 100%;
-}
-
-/* Search Section */
-.search-section {
-    background: white;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+/* Search and Filter Section */
+.search-filter-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 30px;
+    gap: 20px;
 }
 
 .search-input-container {
     position: relative;
+    flex: 1;
 }
 
 .search-input-container i {
@@ -358,97 +346,208 @@ body {
     font-size: 14px;
 }
 
-/* Recent Cases Section */
-.recent-cases {
+.filter-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.filter-container i {
+    position: absolute;
+    left: 15px;
+    color: var(--gray);
+    z-index: 1;
+}
+
+.status-filter {
+    padding: 12px 15px 12px 40px;
+    border: 1px solid var(--light-gray);
+    border-radius: 8px;
+    font-size: 14px;
+    background: white;
+    appearance: none;
+    cursor: pointer;
+    min-width: 150px;
+}
+
+/* Case Details */
+.case-details {
     background: white;
     border-radius: 8px;
     padding: 25px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
 }
 
-.recent-cases h3 {
-    font-size: 18px;
+.case-header {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.case-header h2 {
+    font-size: 20px;
     color: var(--dark);
     margin-bottom: 5px;
 }
 
-.section-subtitle {
-    color: var(--gray);
+.case-id {
     font-size: 14px;
+    color: var(--gray);
+}
+
+.investigator-info {
+    margin-bottom: 25px;
+}
+
+.investigator-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 5px;
+}
+
+.investigator-department {
+    font-size: 14px;
+    color: var(--gray);
+    margin-bottom: 5px;
+}
+
+.expected-date {
+    font-size: 14px;
+    color: var(--primary);
+    font-weight: 500;
+}
+
+.progress-section {
+    margin-bottom: 30px;
+}
+
+.progress-section h3 {
+    font-size: 18px;
+    color: var(--dark);
+    margin-bottom: 15px;
+}
+
+.current-stage {
+    font-size: 16px;
+    color: var(--success);
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.progress-bar-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    flex: 1;
+    height: 10px;
+    background: var(--light-gray);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--success);
+    border-radius: 5px;
+    transition: width 0.5s ease;
+}
+
+.progress-percentage {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.progress-status {
+    font-size: 14px;
+    color: var(--gray);
+    text-align: right;
+}
+
+/* Timeline Section */
+.timeline-section {
+    margin-top: 30px;
+}
+
+.timeline-section h3 {
+    font-size: 18px;
+    color: var(--dark);
     margin-bottom: 20px;
 }
 
-.cases-table-container {
-    overflow-x: auto;
+.timeline {
+    position: relative;
+    padding-left: 30px;
 }
 
-.cases-table {
-    width: 100%;
-    border-collapse: collapse;
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--light-gray);
 }
 
-.cases-table th {
+.timeline-item {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -30px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--light-gray);
+}
+
+.timeline-item.completed::before {
+    background: var(--success);
+}
+
+.timeline-item.current::before {
+    background: var(--primary);
+    box-shadow: 0 0 0 3px rgba(26, 58, 108, 0.2);
+}
+
+.timeline-item.upcoming::before {
+    background: white;
+    border: 2px solid var(--light-gray);
+}
+
+.timeline-content {
     background: var(--light);
-    padding: 12px 15px;
-    text-align: left;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.timeline-title {
+    font-size: 16px;
     font-weight: 600;
     color: var(--dark);
-    border-bottom: 1px solid var(--light-gray);
+    margin-bottom: 5px;
 }
 
-.cases-table td {
-    padding: 12px 15px;
-    border-bottom: 1px solid var(--light-gray);
-    color: var(--dark);
+.timeline-by {
+    font-size: 14px;
+    color: var(--gray);
+    margin-bottom: 5px;
 }
 
-.cases-table tr:hover {
-    background: #f8f9fa;
-}
-
-/* Status and Priority Badges */
-.status-badge {
-    padding: 5px 10px;
-    border-radius: 20px;
+.timeline-date {
     font-size: 12px;
-    font-weight: 500;
-}
-
-.status-badge.lab {
-    background: #fff3cd;
-    color: #856404;
-}
-
-.status-badge.completed {
-    background: #d4edda;
-    color: #155724;
-}
-
-.status-badge.assigned {
-    background: #cce5ff;
-    color: #004085;
-}
-
-.priority-badge {
-    padding: 5px 10px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 500;
-}
-
-.priority-badge.high {
-    background: #f8d7da;
-    color: #721c24;
-}
-
-.priority-badge.critical {
-    background: #dc3545;
-    color: white;
-}
-
-.priority-badge.medium {
-    background: #fff3cd;
-    color: #856404;
+    color: var(--gray);
 }
 
 /* Custom scrollbar for content area */
@@ -470,6 +569,86 @@ body {
     background: #888;
 }
 
+/* Responsive Design */
+@media (max-width: 992px) {
+    .sidebar {
+        width: 80px;
+    }
+    
+    .nav-item span {
+        display: none;
+    }
+    
+    .nav-item i {
+        margin-right: 0;
+    }
+    
+    .main-content {
+        margin-left: 80px;
+        width: calc(100% - 80px);
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+        gap: 15px;
+    }
+    
+    .navbar-center {
+        order: -1;
+        width: 100%;
+    }
+    
+    .search-input {
+        width: 100%;
+    }
+    
+    .content {
+        height: calc(100vh - 140px);
+        padding: 15px;
+    }
+    
+    .search-filter-section {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .filter-container {
+        align-self: flex-start;
+    }
+}
+
+@media (max-width: 576px) {
+    .sidebar {
+        width: 60px;
+    }
+    
+    .main-content {
+        margin-left: 60px;
+        width: calc(100% - 60px);
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .progress-bar-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .progress-bar {
+        width: 100%;
+    }
+}
 /* Logout Confirmation Modal */
 .logout-overlay {
     position: fixed;
@@ -539,130 +718,3 @@ body {
 .logout-confirm-btn:hover {
     background: #c53030;
 }
-
-/* Responsive Design */
-@media (max-width: 1200px) {
-    .dashboard-content {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 992px) {
-    .sidebar {
-        width: 80px;
-    }
-    
-    .nav-item span {
-        display: none;
-    }
-    
-    .nav-item i {
-        margin-right: 0;
-    }
-    
-    .main-content {
-        margin-left: 80px;
-        width: calc(100% - 80px);
-    }
-    
-    .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        height: auto;
-        padding: 15px;
-        gap: 15px;
-    }
-    
-    .navbar-center {
-        order: -1;
-        width: 100%;
-    }
-    
-    .search-input {
-        width: 100%;
-    }
-    
-    .content {
-        height: calc(100vh - 140px);
-        padding: 15px;
-    }
-    
-    .stats-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .cases-table {
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 576px) {
-    .sidebar {
-        width: 60px;
-    }
-    
-    .main-content {
-        margin-left: 60px;
-        width: calc(100% - 60px);
-    }
-    
-    .cases-table th,
-    .cases-table td {
-        padding: 8px 10px;
-    }
-    
-    .logout-buttons {
-        flex-direction: column;
-    }
-}
-/* Add these new styles to your existing dashboard.css file */
-
-/* Updated stat card for total cases */
-.stat-card.total-cases {
-    background: linear-gradient(135deg, #6610f2 0%, #4e0cad 100%);
-}
-
-/* Search filter container */
-.search-filter-container {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.filter-dropdown {
-    position: relative;
-    min-width: 150px;
-}
-
-.filter-dropdown select {
-    width: 100%;
-    padding: 12px 40px 12px 15px;
-    border: 1px solid var(--light-gray);
-    border-radius: 8px;
-    font-size: 14px;
-    appearance: none;
-    background: white;
-    cursor: pointer;
-}
-
-.filter-dropdown i {
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--gray);
-    pointer-events: none;
-}
-
-/* Update search input container to work with filter */
-.search-input-container {
-    position: relative;
-    flex: 1;
-}
-
-/* Keep all the existing CSS from the previous version and add the above new styles */
