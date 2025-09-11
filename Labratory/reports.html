@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Results - Federal Police</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="reports.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="logo-container">
+            <div class="logo">
+            <img src="Federal_Police_Commission_of_Ethiopia_Coat_of_Arms_and_Logo-removebg-preview.png" alt="ethiopia federal police logo">
+        </div>
+        
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="case.html" class="nav-item">
+                <i class="fas fa-folder"></i>
+                <span>Cases</span>
+            </a>
+            <a href="reports.html" class="nav-item active">
+                <i class="fas fa-chart-bar"></i>
+                <span>Reports</span>    
+            <a href="#" class="nav-item logout">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Logout</span>
+            </a>
+        </nav>
+    </aside>
+    <div class="main-content">
+        <nav class="navbar">
+            <div class="navbar-left">
+                <!-- Menu toggle removed -->
+            </div>
+            
+            <div class="navbar-center">
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Search here">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+            </div>
+            
+            <div class="navbar-right">
+                <div class="notification-container">
+                    <i class="fas fa-bell notification-icon"></i>
+                    <span class="notification-badge">3</span>
+                </div>
+                
+                <div class="language-selector">
+                    <i class="fas fa-globe"></i>
+                    <span>English</span>
+                </div>
+                
+                <div class="user-profile">
+                    <i class="fas fa-user-circle"></i>
+                    <span>Admin</span>
+                </div>
+            </div>
+        </nav>
+
+        <div class="content">
+            <div class="page-header">
+                <h1>Lab Results</h1>
+                <div class="breadcrumb">Manage investigation result and reports</div>
+            </div>
+
+            <div class="search-section">
+                <div class="search-input-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search results...">
+                </div>
+                
+                <div class="filter-dropdown">
+                    <select id="status-filter">
+                        <option value="all">All Statuses</option>
+                        <option value="submitted" selected>Submitted</option>
+                        <option value="pending">Pending</option>
+                        <option value="review">Under Review</option>
+                    </select>
+                    <i class="fas fa-filter"></i>
+                </div>
+            </div>
+
+            <div class="lab-result-card">
+                <div class="result-header">
+                    <div>
+                        <h2 class="result-title">CST-2024-O01 - FP-O01-A</h2>
+                        <span class="result-status">SUBMITTED</span>
+                    </div>
+                    <div class="result-id">Case ID: CST-2024-O01</div>
+                </div>
+
+                <div class="result-description">
+                    <p>Three distinct fingerprint patterns were identified on the weapon handle. Pattern analysis shows ridge characteristics consistent with suspect database records.</p>
+                </div>
+
+                <div class="result-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Investigator</span>
+                        <span class="meta-value">Dawit Bekele</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Submitted</span>
+                        <span class="meta-value">1/16/2024</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Attachments</span>
+                        <span class="meta-value">1</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Signatures</span>
+                        <span class="meta-value">1</span>
+                    </div>
+                </div>
+
+                <div class="conclusion-section">
+                    <div class="conclusion-label">Conclusion:</div>
+                    <div class="conclusion-text">
+                        The fingerprints found on the weapon handle match the reference prints of suspect John Doe (ID: 12345) with 100% certainty.
+                    </div>
+                </div>
+
+                <div class="result-footer">
+                    <div>Created: 1/16/2024 • Last updated: 1/16/2024</div>
+                    <div class="action-buttons">
+                        <button class="btn btn-primary"><i class="fas fa-download"></i> Download Report</button>
+                        <button class="btn btn-info view-details-btn"><i class="fas fa-eye"></i> View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lab-result-card">
+                <div class="result-header">
+                    <div>
+                        <h2 class="result-title">CST-2024-102 - DNA-045-B</h2>
+                        <span class="result-status">SUBMITTED</span>
+                    </div>
+                    <div class="result-id">Case ID: CST-2024-102</div>
+                </div>
+
+                <div class="result-description">
+                    <p>DNA analysis of samples collected from the crime scene reveals a match with the suspect's genetic profile.</p>
+                </div>
+
+                <div class="result-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Investigator</span>
+                        <span class="meta-value">Selamawit Tesfaye</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Submitted</span>
+                        <span class="meta-value">2/5/2024</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Attachments</span>
+                        <span class="meta-value">3</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Signatures</span>
+                        <span class="meta-value">2</span>
+                    </div>
+                </div>
+
+                <div class="conclusion-section">
+                    <div class="conclusion-label">Conclusion:</div>
+                    <div class="conclusion-text">
+                        The DNA sample from the crime scene matches the suspect's DNA profile with a probability of 99.97%. This provides strong evidence linking the suspect to the crime scene.
+                    </div>
+                </div>
+
+                <div class="result-footer">
+                    <div>Created: 2/3/2024 • Last updated: 2/5/2024</div>
+                    <div class="action-buttons">
+                        <button class="btn btn-primary"><i class="fas fa-download"></i> Download Report</button>
+                        <button class="btn btn-info view-details-btn"><i class="fas fa-eye"></i> View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lab-result-card">
+                <div class="result-header">
+                    <div>
+                        <h2 class="result-title">CST-2024-087 - BAL-022-C</h2>
+                        <span class="result-status" style="background-color: #fff3cd; color: #856404;">PENDING REVIEW</span>
+                    </div>
+                    <div class="result-id">Case ID: CST-2024-087</div>
+                </div>
+
+                <div class="result-description">
+                    <p>Blood alcohol content analysis from the suspect's blood sample. Results indicate elevated alcohol levels at the time of the incident.</p>
+                </div>
+
+                <div class="result-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Investigator</span>
+                        <span class="meta-value">Michael Getachew</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Submitted</span>
+                        <span class="meta-value">2/10/2024</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Attachments</span>
+                        <span class="meta-value">2</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Signatures</span>
+                        <span class="meta-value">0</span>
+                    </div>
+                </div>
+
+                <div class="conclusion-section">
+                    <div class="conclusion-label">Preliminary Findings:</div>
+                    <div class="conclusion-text">
+                        Blood alcohol concentration measured at 0.12%, which is above the legal limit of 0.08%. Final report pending supervisor review and approval.
+                    </div>
+                </div>
+
+                <div class="result-footer">
+                    <div>Created: 2/8/2024 • Last updated: 2/10/2024</div>
+                    <div class="action-buttons">
+                        <button class="btn btn-primary"><i class="fas fa-download"></i> Download Report</button>
+                        <button class="btn btn-info view-details-btn"><i class="fas fa-eye"></i> View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Detail Modal -->
+    <div class="modal-overlay" id="detail-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Lab Result Details</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3 class="modal-section-title">Case Information</h3>
+                    <p><strong>Case ID:</strong> <span id="modal-case-id">CST-2024-O01</span></p>
+                    <p><strong>Analysis Type:</strong> <span id="modal-analysis-type">Fingerprint Analysis</span></p>
+                    <p><strong>Status:</strong> <span id="modal-status">Submitted</span></p>
+                </div>
+                
+                <div class="modal-section">
+                    <h3 class="modal-section-title">Investigation Details</h3>
+                    <p><strong>Investigator:</strong> <span id="modal-investigator">Dawit Bekele</span></p>
+                    <p><strong>Submitted:</strong> <span id="modal-submitted">1/16/2024</span></p>
+                    <p><strong>Attachments:</strong> <span id="modal-attachments">1</span></p>
+                    <p><strong>Signatures:</strong> <span id="modal-signatures">1</span></p>
+                </div>
+                
+                <div class="modal-section">
+                    <h3 class="modal-section-title">Analysis Results</h3>
+                    <p id="modal-description">Three distinct fingerprint patterns were identified on the weapon handle. Pattern analysis shows ridge characteristics consistent with suspect database records.</p>
+                </div>
+                
+                <div class="modal-section">
+                    <h3 class="modal-section-title">Conclusion</h3>
+                    <p id="modal-conclusion">The fingerprints found on the weapon handle match the reference prints of suspect John Doe (ID: 12345) with 100% certainty.</p>
+                </div>
+                
+                <div class="modal-section">
+                    <h3 class="modal-section-title">Technical Details</h3>
+                    <p><strong>Methodology:</strong> Automated Fingerprint Identification System (AFIS)</p>
+                    <p><strong>Analysis Date:</strong> January 10-15, 2024</p>
+                    <p><strong>Reference Database:</strong> National Criminal Database v4.2</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary close-modal-btn">Close</button>
+                <button class="btn btn-primary"><i class="fas fa-download"></i> Download Full Report</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="reports.js"> </script>
+    <script src="logout.js"> </script>
+</body>
+</html>
