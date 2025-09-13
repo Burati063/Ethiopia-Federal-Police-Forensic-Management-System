@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Federal Police</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="case.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="logo-container">
+            <div class="logo">
+              <img src="Federal_Police_Commission_of_Ethiopia_Coat_of_Arms_and_Logo-removebg-preview.png" alt="ethiopia federal police logo">
+            </div>
+        </div>
+        
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="case.html" class="nav-item active">
+                <i class="fas fa-folder"></i>
+                <span>Cases</span>
+            </a>
+            <a href="reports.html" class="nav-item">
+                <i class="fas fa-chart-bar"></i>
+                <span>Reports</span>
+            </a>
+            <a href="progress-tracking.html" class="nav-item">
+                <i class="fas fa-tasks"></i>
+                <span>Progress Tracking</span>
+            </a>
+            
+            <!-- Merged Menu Items -->
+            <a href="databackup.html" class="nav-item">
+                <i class="fas fa-database"></i>
+                <span>Data Backup</span>
+            </a>
+            
+            <a href="users.html" class="nav-item">
+                <i class="fas fa-users"></i>
+                <span>Users</span>
+            </a>
+            
+            <a href="settings.html" class="nav-item">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+            </a>
+            <!-- End Merged Menu Items -->
+            
+            <a href="#" class="nav-item logout">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Logout</span>
+            </a>
+        </nav>
+    </aside>
+
+    <div class="main-content">
+        <nav class="navbar">
+            <div class="navbar-left">
+                <!-- Menu toggle removed -->
+            </div>
+            
+            <div class="navbar-center">
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Search here">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+            </div>
+            
+            <div class="navbar-right">
+                <div class="notification-container">
+                    <i class="fas fa-bell notification-icon"></i>
+                    <span class="notification-badge">3</span>
+                </div>
+                
+                <div class="language-selector">
+                    <i class="fas fa-globe"></i>
+                    <span>English</span>
+                </div>
+                
+                <div class="user-profile">
+                    <i class="fas fa-user-circle"></i>
+                    <span>Admin</span>
+                </div>
+            </div>
+        </nav>
+                    <div class="recent-cases">
+                        <h3>Cases</h3>
+                        <p class="section-subtitle">Manage forensic investigation cases</p>
+                        
+
+                
+                <!-- Search bar -->
+                <div class="search-filter-section">
+                    <div class="search-input-container">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search by case ID, title, or investigator...">
+                    </div>
+                    
+                    <div class="filter-container">
+                        <i class="fas fa-filter"></i>
+                        <select class="status-filter">
+                            <option value="all">All Status</option>
+                            <option value="active">Active</option>
+                            <option value="in-progress">In Progress</option>
+                            <option value="completed">Completed</option>
+                            <option value="overdue">Overdue</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <!-- Recent Cases -->
+               
+                
+                <!-- Case Details -->
+                <div class="case-details">
+                    <h3> Recent Cases</h3>
+                    <p class="section-subtitle">Latest forensic investigation cases in the system </p>
+                    
+                    <table class="case-table">
+                        <thead>
+                            <tr>
+                                <th>CASE ID</th>
+                                <th>INVESTIGATION TYPE</th>
+                                <th>SOURCE</th>
+                                <th>STATUS</th>
+                                <th>ASSIGNED TO</th>
+                                <th>ACTIONS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>CSE-2024-001</td>
+                                <td>Fingerprint analysis required for bank robbery investigation</td>
+                                <td>Federal High Court FF/007/2024</td>
+                                <td><span class="status lab">In Laboratory</span></td>
+                                <td>A. Dr. Tadesse Alemu</td>
+                                <td><button class="action-btn"><i class="fas fa-eye"></i> View Details</button></td>
+                            </tr>
+                            <tr>
+                                <td>CSE-2024-002</td>
+                                <td>DNA Investigation</td>
+                                <td>Addis Ababa Police Station</td>
+                                <td><span class="status completed">Completed</span></td>
+                                <td>A. Dr. Meron Bekele</td>
+                                <td><button class="action-btn"><i class="fas fa-eye"></i> View Details</button></td>
+                            </tr>
+                            <tr>
+                                <td>CSE-2024-003</td>
+                                <td>Document Forgery Investigation</td>
+                                <td>Oromia Regional Police DOC/083/2024</td>
+                                <td><span class="status assigned">Assigned</span></td>
+                                <td>A. Alo Girma Wolde</td>
+                                <td><button class="action-btn"><i class="fas fa-eye"></i> View Details</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+     
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="case.js"></script>
+    <script src="logout.js"></script>
+</body>
+</html>

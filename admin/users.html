@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management - Federal Police</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="users.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="logo-container">
+            <div class="logo">
+             <img src="Federal_Police_Commission_of_Ethiopia_Coat_of_Arms_and_Logo-removebg-preview.png"alt="ethiopia federal police logo">
+            </div>
+        </div>
+        
+        <nav class="nav-menu">
+            <a href="dashboard.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="case.html" class="nav-item">
+                <i class="fas fa-folder"></i>
+                <span>Cases</span>
+            </a>
+            <a href="reports.html" class="nav-item">
+                <i class="fas fa-chart-bar"></i>
+                <span>Reports</span>
+            </a>
+            <a href="progress_tracking.html" class="nav-item">
+                <i class="fas fa-tasks"></i>
+                <span>Progress Tracking</span>
+            </a>
+            
+            <!-- Merged Menu Items -->
+            <a href="databackup.html" class="nav-item">
+                <i class="fas fa-database"></i>
+                <span>Data Backup</span>
+            </a>
+            
+            <a href="users.html" class="nav-item active">
+                <i class="fas fa-users"></i>
+                <span>Users</span>
+            </a>
+            
+            <a href="settings.html" class="nav-item">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+            </a>
+            <!-- End Merged Menu Items -->
+            
+            <a href="#" class="nav-item logout">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Logout</span>
+            </a>
+        </nav>
+    </aside>
+    <div class="main-content">
+        <nav class="navbar">
+            <div class="navbar-left">
+                <!-- Menu toggle removed -->
+            </div>
+            
+            <div class="navbar-center">
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Search here">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+            </div>
+            
+            <div class="navbar-right">
+                <div class="notification-container">
+                    <i class="fas fa-bell notification-icon"></i>
+                    <span class="notification-badge">3</span>
+                </div>
+                
+                <div class="language-selector">
+                    <i class="fas fa-globe"></i>
+                    <span>English</span>
+                </div>
+                
+                <div class="user-profile">
+                    <i class="fas fa-user-circle"></i>
+                    <span>Admin</span>
+                </div>
+            </div>
+        </nav>
+
+        <div class="content">
+            <div class="page-header">
+                <div>
+                    <h1>User Management</h1>
+                    <div class="breadcrumb">Manage System users and their roles</div>
+                </div>
+                <button class="btn-add-user" id="addUserBtn">
+                    <i class="fas fa-user-plus"></i>
+                    Add User
+                </button>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card total-users">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-value">7</div>
+                        <div class="stat-label">Total Users</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card active-users">
+                    <div class="stat-icon">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-value">6</div>
+                        <div class="stat-label">Active Users</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card admin-users">
+                    <div class="stat-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-value">1</div>
+                        <div class="stat-label">Admin Users</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card inactive-users">
+                    <div class="stat-icon">
+                        <i class="fas fa-user-times"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-value">1</div>
+                        <div class="stat-label">Inactive Users</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="user-search-section">
+                <div class="user-search-input-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search users by name, email, or username...">
+                </div>
+                <div class="filter-container">
+                    <div class="filter-dropdown">
+                        <select>
+                            <option value="">Filter by Role</option>
+                            <option value="admin">Administrator</option>
+                            <option value="custodia">Custodia Officer</option>
+                            <option value="technician">Lab Technician</option>
+                            <option value="department_head">Department Head</option>
+                            <option value="view_only">View Only</option>
+                        </select>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="filter-dropdown">
+                        <select>
+                            <option value="">Filter by Status</option>
+                            <option value="active">Active</option>
+                            <option value="inactive">Inactive</option>
+                        </select>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="users-table-container">
+                <h3>All Users</h3>
+                <div class="section-subtitle">Manage system users and their permissions</div>
+                
+                <table class="users-table">
+                    <thead>
+                        <tr>
+                            <th><i class="fas fa-user"></i> USER</th>
+                            <th><i class="fas fa-briefcase"></i> ROLE & DEPARTMENT</th>
+                            <th><i class="fas fa-address-book"></i> CONTACT</th>
+                            <th><i class="fas fa-circle"></i> STATUS</th>
+                            <th><i class="fas fa-calendar"></i> LAST LOGIN</th>
+                            <th><i class="fas fa-cog"></i> ACTIONS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="user-main-info">
+                                    <div class="user-avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div>
+                                        <div><strong>Adi 4444</strong></div>
+                                        <div class="user-details">@admin</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div><strong>ADMIN</strong></div>
+                                <div class="user-details">System Administration</div>
+                            </td>
+                            <td>
+                                <div>admin@efpf.gov.et</div>
+                                <div class="user-details">+251911123456</div>
+                            </td>
+                            <td><span class="status-badge active">Active</span></td>
+                            <td><i class="fas fa-calendar-alt"></i> 1/21/2024</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="action-btn details" title="Details">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button class="action-btn edit" title="Edit">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button class="action-btn delete" title="Delete">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="user-main-info">
+                                    <div class="user-avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div>
+                                        <div><strong>Sara McKennen</strong></div>
+                                        <div class="user-details">@custodia</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div><strong>CUSTODIA OFFICER</strong></div>
+                                <div class="user-details">Custodia Main Class</div>
+                            </td>
+                            <td>
+                                <div>custodia@efpf.gov.et</div>
+                                <div class="user-details">+251911234567</div>
+                            </td>
+                            <td><span class="status-badge active">Active</span></td>
+                            <td><i class="fas fa-calendar-alt"></i> 1/21/2024</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="action-btn details" title="Details">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button class="action-btn edit" title="Edit">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button class="action-btn delete" title="Delete">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="user-main-info">
+                                    <div class="user-avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div>
+                                        <div><strong>Dr. Tadesse Alemu</strong></div>
+                                        <div class="user-details">@labtech</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div><strong>LAB TECHNICIAN</strong></div>
+                                <div class="user-details">Fingerprint Investigation Class</div>
+                            </td>
+                            <td>
+                                <div>lab.tech@efpf.gov.et</div>
+                                <div class="user-details">+251911346678</div>
+                            </td>
+                            <td><span class="status-badge active">Active</span></td>
+                            <td><i class="fas fa-calendar-alt"></i> 1/20/2024</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="action-btn details" title="Details">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button class="action-btn edit" title="Edit">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button class="action-btn delete" title="Delete">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="user-main-info">
+                                    <div class="user-avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div>
+                                        <div><strong>Dr. Meron Belele</strong></div>
+                                        <div class="user-details">@meron.belele</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div><strong>LAB TECHNICIAN</strong></div>
+                                <div class="user-details">Biology Investigation Class</div>
+                            </td>
+                            <td>
+                                <div>meron.belele@efpf.gov.et</div>
+                                <div class="user-details">+251911456789</div>
+                            </td>
+                            <td><span class="status-badge active">Active</span></td>
+                            <td><i class="fas fa-calendar-alt"></i> 1/19/2024</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="action-btn details" title="Details">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button class="action-btn edit" title="Edit">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button class="action-btn delete" title="Delete">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="user-main-info">
+                                    <div class="user-avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div>
+                                        <div><strong>Alo Girma Wolde</strong></div>
+                                        <div class="user-details">@girma.wolde</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div><strong>LAB TECHNICIAN</strong></div>
+                                <div class="user-details">Document Investigation Class</div>
+                            </td>
+                            <td>
+                                <div>girma.wolde@efpf.gov.et</div>
+                                <div class="user-details">+251911567890</div>
+                            </td>
+                            <td><span class="status-badge active">Active</span></td>
+                            <td><i class="fas fa-calendar-alt"></i> 1/18/2024</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="action-btn details" title="Details">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button class="action-btn edit" title="Edit">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button class="action-btn delete" title="Delete">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="user-main-info">
+                                    <div class="user-avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div>
+                                        <div><strong>Alo Belele Tadesse</strong></div>
+                                        <div class="user-details">@belele.tadesse</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div><strong>DEPARTMENT HEAD</strong></div>
+                                <div class="user-details">Forensic Investigation Laboratory Department</div>
+                            </td>
+                            <td>
+                                <div>belele.tadesse@efpf.gov.et</div>
+                                <div class="user-details">+251911678901</div>
+                            </td>
+                            <td><span class="status-badge active">Active</span></td>
+                            <td><i class="fas fa-calendar-alt"></i> 1/21/2024</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="action-btn details" title="Details">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button class="action-btn edit" title="Edit">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button class="action-btn delete" title="Delete">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="user-main-info">
+                                    <div class="user-avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div>
+                                        <div><strong>Wiro Almaz Getachew</strong></div>
+                                        <div class="user-details">@almaz.getachew</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div><strong>VIEW ONLY</strong></div>
+                                <div class="user-details">Crime Area Investigation Department</div>
+                            </td>
+                            <td>
+                                <div>almaz.getachew@efpf.gov.et</div>
+                                <div class="user-details">+251911789012</div>
+                            </td>
+                            <td><span class="status-badge inactive">Inactive</span></td>
+                            <td><i class="fas fa-calendar-alt"></i> 1/15/2024</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="action-btn details" title="Details">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button class="action-btn edit" title="Edit">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button class="action-btn delete" title="Delete">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- User Creation Modal -->
+    <div class="modal-overlay" id="userModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>User Creation Form</h2>
+                <button class="modal-close" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="userForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" id="username" name="username" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="role">Role</label>
+                        <select id="role" name="role" required>
+                            <option value="">Select Role</option>
+                            <option value="deputy_department"> Deputy Main Department</option>
+                            <option value="main_department"> Department</option>
+                            <option value="main_class">Main Class</option>
+                            <option value="class">Class</option>
+                            <option value="custodia">Custodia</option>
+                            <option value="lab">Laboratory</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group" id="mainDepartmentGroup" style="display: none;">
+                        <label for="mainDepartment">Main Department</label>
+                        <select id="mainDepartment" name="mainDepartment">
+                            <option value="">Select Main Department</option>
+                            <option value="forensic_lab">Forensic Laboratory Department</option>
+                            <option value="crime_investigation">Crime Area Investigation Department</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group" id="mainClassGroup" style="display: none;">
+                        <label for="mainClass">Main Class</label>
+                        <select id="mainClass" name="mainClass">
+                            <option value="">Select Main Class</option>
+                            <option value="fingerprint_crime">Fingerprint & Crime Record Main Class</option>
+                            <option value="forensic_biochemistry">Forensic & Biochemistry Main Class</option>
+                            <option value="physical_forensic">Physical Forensic Main Class</option>
+                            <option value="crime_investigation_main">Crime Area Investigation Main Class</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group" id="classGroup" style="display: none;">
+                        <label for="class">Class</label>
+                        <select id="class" name="class">
+                            <option value="">Select Class</option>
+                            <option value="peaceful_fingerprint">Peaceful People Fingerprint Class</option>
+                            <option value="digital_fingerprint">Digital Fingerprint Investigation Class</option>
+                            <option value="crime_record">Crime Record Fingerprint Investigation Class</option>
+                            <option value="hidden_fingerprint">Hidden Fingerprint Investigation Class</option>
+                            <option value="fire_explosion">Fire and Explosion Investigation Class</option>
+                            <option value="chemistry_toxicology">Chemistry and Toxicology Investigation Class</option>
+                            <option value="biology">Biology Investigation Class</option>
+                            <option value="dna">DNA Investigation Class</option>
+                            <option value="weapon_footprint">Weapon and Footprint Class</option>
+                            <option value="digital_investigation">Digital Investigation Class</option>
+                            <option value="document">Document Investigation Class</option>
+                            <option value="cremation">Cremation Investigation Class</option>
+                            <option value="crime_area">Crime Area Investigation Class</option>
+                            <option value="photography">Photography Investigation Class</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group" id="labGroup" style="display: none;">
+                        <label for="lab">Laboratory</label>
+                        <select id="lab" name="lab">
+                            <option value="">Select Laboratory</option>
+                            <option value="peaceful_fingerprint_lab">Peaceful People Fingerprint Laboratory</option>
+                            <option value="digital_fingerprint_lab">Digital Fingerprint Investigation Laboratory</option>
+                            <option value="crime_record_lab">Crime Record Fingerprint Investigation Laboratory</option>
+                            <option value="hidden_fingerprint_lab">Hidden Fingerprint Investigation Laboratory</option>
+                            <option value="fire_explosion_lab">Fire and Explosion Investigation Laboratory</option>
+                            <option value="chemistry_toxicology_lab">Chemistry and Toxicology Investigation Laboratory</option>
+                            <option value="biology_lab">Biology Investigation Laboratory</option>
+                            <option value="dna_lab">DNA Investigation Laboratory</option>
+                            <option value="weapon_footprint_lab">Weapon and Footprint Laboratory</option>
+                            <option value="digital_investigation_lab">Digital Investigation Laboratory</option>
+                            <option value="document_lab">Document Investigation Laboratory</option>
+                            <option value="cremation_lab">Cremation Investigation Laboratory</option>
+                            <option value="crime_area_lab">Crime Area Investigation Laboratory</option>
+                            <option value="photography_lab">Photography Investigation Laboratory</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn-cancel" id="cancelBtn">Cancel</button>
+                <button type="button" class="btn-submit" id="submitBtn">Create User</button>
+            </div>
+        </div>
+    </div>
+    <script src="users.js"></script>
+    <script src="logout.js"></script>
+    
+</body>
+</html>

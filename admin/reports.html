@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investigation Reports - Federal Police</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="reports.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="logo-container">
+            <div class="logo">
+                <img src="Federal_Police_Commission_of_Ethiopia_Coat_of_Arms_and_Logo-removebg-preview.png" alt="ethiopia federal police logo">
+            </div>
+        </div>
+        
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="case.html" class="nav-item">
+                <i class="fas fa-folder"></i>
+                <span>Cases</span>
+            </a>
+            <a href="reports.html" class="nav-item active">
+                <i class="fas fa-chart-bar"></i>
+                <span>Reports</span>
+            </a>
+            <a href="progress_tracking.html" class="nav-item">
+                <i class="fas fa-tasks"></i>
+                <span>Progress Tracking</span>
+            </a>
+             <!-- Merged Menu Items -->
+             <a href="databackup.html" class="nav-item">
+                <i class="fas fa-database"></i>
+                <span>Data Backup</span>
+            </a>
+            
+            <a href="users.html" class="nav-item">
+                <i class="fas fa-users"></i>
+                <span>Users</span>
+            </a>
+            
+            <a href="settings.html" class="nav-item">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+            </a>
+            <!-- End Merged Menu Items -->
+            <a href="#" class="nav-item logout">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Logout</span>
+            </a>
+        </nav>
+    </aside>
+
+    <div class="main-content">
+        <nav class="navbar">
+            <div class="navbar-left">
+                <!-- Menu toggle removed -->
+            </div>
+            
+            <div class="navbar-center">
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Search here">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+            </div>
+            
+            <div class="navbar-right">
+                <div class="notification-container">
+                    <i class="fas fa-bell notification-icon"></i>
+                    <span class="notification-badge"></span>
+                </div>
+                
+                <div class="language-selector">
+                    <i class="fas fa-globe"></i>
+                    <span>English</span>
+                </div>
+                
+                <div class="user-profile">
+                    <i class="fas fa-user-circle"></i>
+                    <span>User</span>
+                </div>
+            </div>
+        </nav>
+
+        <div class="content">
+            <div class="page-header">
+                <h1>Investigation Reports</h1>
+                <div class="breadcrumb">My Department Investigation Reports</div>
+            </div>
+
+            <div class="filter-section">
+                <div class="search-report">
+                    <input type="text" placeholder="Search by case ID, title, or investigator...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="status-filters">
+                    <button class="status-btn all active">All</button>
+                    <button class="status-btn completed">Completed</button>
+                    <button class="status-btn review">Under Review</button>
+                    <button class="status-btn progress">In Progress</button>
+                </div>
+            </div>
+
+            <div class="reports-grid">
+                <!-- Report 1 - Completed -->
+                <div class="report-card" data-status="completed">
+                    <div class="report-header">
+                        <div class="report-title">Fingerprint Analysis Report - Bank Robbery Investigation</div>
+                        <div class="report-id">CSE-2024-001 <span class="investigator">A. Dr. Tadeese Alemu</span></div>
+                    </div>
+                    <div class="report-body">
+                        <div class="department">Department: Fingerprint investigation</div>
+                        <div class="findings">
+                            <h4>Findings:</h4>
+                            <p>Positive match found with suspect fingerprints</p>
+                        </div>
+                        <div class="conclusion">
+                            <h4>Conclusion:</h4>
+                            <p>Evidence supports prosecution case</p>
+                        </div>
+                        <a href="#" class="view-details">View Details</a>
+                    </div>
+                    <div class="report-footer">
+                        <div class="submission-date">Submitted: 17/3/2024<br>Reviewed by Ato Girma Wolde on 1/21/2024</div>
+                        <div class="status-badge status-completed">Completed</div>
+                    </div>
+                </div>
+
+                <!-- Report 2 - Under Review -->
+                <div class="report-card" data-status="review">
+                    <div class="report-header">
+                        <div class="report-title">DNA Analysis Report - Murder Case Evidence</div>
+                        <div class="report-id">CSE-2024-002 <span class="investigator">A. Dr. Meron Bekele</span></div>
+                    </div>
+                    <div class="report-body">
+                        <div class="department">Department: Biology investigation</div>
+                        <div class="findings">
+                            <h4>Findings:</h4>
+                            <p>DNA profile extracted from blood samples</p>
+                        </div>
+                        <div class="conclusion">
+                            <h4>Conclusion:</h4>
+                            <p>Pending database comparison</p>
+                        </div>
+                        <a href="#" class="view-details">View Details</a>
+                    </div>
+                    <div class="report-footer">
+                        <div class="submission-date">Submitted: 1/19/2024</div>
+                        <div class="status-badge status-review">Under Review</div>
+                    </div>
+                </div>
+
+                <!-- Report 3 - In Progress -->
+                <div class="report-card" data-status="progress">
+                    <div class="report-header">
+                        <div class="report-title">Document Forensics Report - Fraud Investigation</div>
+                        <div class="report-id">CSE-2024-003 <span class="investigator">A. Ato Girma Wolde</span></div>
+                    </div>
+                    <div class="report-body">
+                        <div class="department">Department: Document investigation</div>
+                        <div class="findings">
+                            <h4>Findings:</h4>
+                            <p>Analysis in progress</p>
+                        </div>
+                        <div class="conclusion">
+                            <h4>Conclusion:</h4>
+                            <p>Preliminary findings suggest document alteration</p>
+                        </div>
+                        <a href="#" class="view-details">View Details</a>
+                    </div>
+                    <div class="report-footer">
+                        <div class="submission-date">Submitted: Not yet submitted</div>
+                        <div class="status-badge status-progress">IN PROGRESS</div>
+                    </div>
+                </div>
+
+                <!-- Additional reports for demonstration -->
+                <!-- Report 4 - Completed -->
+                <div class="report-card" data-status="completed">
+                    <div class="report-header">
+                        <div class="report-title">Ballistics Report - Shooting Incident</div>
+                        <div class="report-id">CSE-2024-004 <span class="investigator">A. Dr. Solomon Tesfaye</span></div>
+                    </div>
+                    <div class="report-body">
+                        <div class="department">Department: Firearms investigation</div>
+                        <div class="findings">
+                            <h4>Findings:</h4>
+                            <p>Bullet matched to suspect's firearm</p>
+                        </div>
+                        <div class="conclusion">
+                            <h4>Conclusion:</h4>
+                            <p>Weapon was used in the incident</p>
+                        </div>
+                        <a href="#" class="view-details">View Details</a>
+                    </div>
+                    <div class="report-footer">
+                        <div class="submission-date">Submitted: 12/4/2024<br>Reviewed by Ato Girma Wolde on 15/4/2024</div>
+                        <div class="status-badge status-completed">Completed</div>
+                    </div>
+                </div>
+
+                <!-- Report 5 - In Progress -->
+                <div class="report-card" data-status="progress">
+                    <div class="report-header">
+                        <div class="report-title">Digital Forensics Report - Cyber Crime</div>
+                        <div class="report-id">CSE-2024-005 <span class="investigator">A. Dr. Hanna Girma</span></div>
+                    </div>
+                    <div class="report-body">
+                        <div class="department">Department: Digital investigation</div>
+                        <div class="findings">
+                            <h4>Findings:</h4>
+                            <p>Data extraction from devices in progress</p>
+                        </div>
+                        <div class="conclusion">
+                            <h4>Conclusion:</h4>
+                            <p>Awaiting full data analysis</p>
+                        </div>
+                        <a href="#" class="view-details">View Details</a>
+                    </div>
+                    <div class="report-footer">
+                        <div class="submission-date">Submitted: Not yet submitted</div>
+                        <div class="status-badge status-progress">IN PROGRESS</div>
+                    </div>
+                </div>
+
+                <!-- Report 6 - Under Review -->
+                <div class="report-card" data-status="review">
+                    <div class="report-header">
+                        <div class="report-title">Toxicology Report - Suspicious Death</div>
+                        <div class="report-id">CSE-2024-006 <span class="investigator">A. Dr. Michael Asrat</span></div>
+                    </div>
+                    <div class="report-body">
+                        <div class="department">Department: Chemical investigation</div>
+                        <div class="findings">
+                            <h4>Findings:</h4>
+                            <p>High levels of poison detected in samples</p>
+                        </div>
+                        <div class="conclusion">
+                            <h4>Conclusion:</h4>
+                            <p>Awaiting secondary confirmation</p>
+                        </div>
+                        <a href="#" class="view-details">View Details</a>
+                    </div>
+                    <div class="report-footer">
+                        <div class="submission-date">Submitted: 5/5/2024</div>
+                        <div class="status-badge status-review">Under Review</div>
+                    </div>
+                </div>
+                
+                <!-- Additional reports to ensure scrolling works -->
+                <!-- Report 7 - Completed -->
+                <div class="report-card" data-status="completed">
+                    <div class="report-header">
+                        <div class="report-title">Crime Scene Analysis - Burglary Case</div>
+                        <div class="report-id">CSE-2024-007 <span class="investigator">A. Inspector Daniel Mekonnen</span></div>
+                    </div>
+                    <div class="report-body">
+                        <div class="department">Department: Crime Scene investigation</div>
+                        <div class="findings">
+                            <h4>Findings:</h4>
+                            <p>Multiple points of entry, professional tools used</p>
+                        </div>
+                        <div class="conclusion">
+                            <h4>Conclusion:</h4>
+                            <p>Organized criminal activity suspected</p>
+                        </div>
+                        <a href="#" class="view-details">View Details</a>
+                    </div>
+                    <div class="report-footer">
+                        <div class="submission-date">Submitted: 22/5/2024<br>Reviewed by Ato Girma Wolde on 25/5/2024</div>
+                        <div class="status-badge status-completed">Completed</div>
+                    </div>
+                </div>
+
+                <!-- Report 8 - In Progress -->
+                <div class="report-card" data-status="progress">
+                    <div class="report-header">
+                        <div class="report-title">Financial Records Analysis - Embezzlement</div>
+                        <div class="report-id">CSE-2024-008 <span class="investigator">A. Dr. Sara Abebe</span></div>
+                    </div>
+                    <div class="report-body">
+                        <div class="department">Department: Financial investigation</div>
+                        <div class="findings">
+                            <h4>Findings:</h4>
+                            <p>Multiple suspicious transactions identified</p>
+                        </div>
+                        <div class="conclusion">
+                            <h4>Conclusion:</h4>
+                            <p>Further analysis of bank records needed</p>
+                        </div>
+                        <a href="#" class="view-details">View Details</a>
+                    </div>
+                    <div class="report-footer">
+                        <div class="submission-date">Submitted: Not yet submitted</div>
+                        <div class="status-badge status-progress">IN PROGRESS</div>
+                    </div>
+                </div>
+
+                <!-- Report 9 - Completed -->
+                <div class="report-card" data-status="completed">
+                    <div class="report-header">
+                        <div class="report-title">Surveillance Analysis - Kidnapping Case</div>
+                        <div class="report-id">CSE-2024-009 <span class="investigator">A. Inspector Helen Teshome</span></div>
+                    </div>
+                    <div class="report-body">
+                        <div class="department">Department: Surveillance investigation</div>
+                        <div class="findings">
+                            <h4>Findings:</h4>
+                            <p>Vehicle identified from CCTV footage, license plate partially visible</p>
+                        </div>
+                        <div class="conclusion">
+                            <h4>Conclusion:</h4>
+                            <p>Vehicle registered to known associate of suspect</p>
+                        </div>
+                        <a href="#" class="view-details">View Details</a>
+                    </div>
+                    <div class="report-footer">
+                        <div class="submission-date">Submitted: 10/6/2024<br>Reviewed by Ato Girma Wolde on 12/6/2024</div>
+                        <div class="status-badge status-completed">Completed</div>
+                    </div>
+                </div>
+
+                <!-- Report 10 - Under Review -->
+                <div class="report-card" data-status="review">
+                    <div class="report-header">
+                        <div class="report-title">Psychological Profile - Serial Offender</div>
+                        <div class="report-id">CSE-2024-010 <span class="investigator">A. Dr. Samuel Getachew</span></div>
+                    </div>
+                    <div class="report-body">
+                        <div class="department">Department: Behavioral analysis</div>
+                        <div class="findings">
+                            <h4>Findings:</h4>
+                            <p>Pattern suggests organized offender with above average intelligence</p>
+                        </div>
+                        <div class="conclusion">
+                            <h4>Conclusion:</h4>
+                            <p>Likely to have prior criminal record, possible military background</p>
+                        </div>
+                        <a href="#" class="view-details">View Details</a>
+                    </div>
+                    <div class="report-footer">
+                        <div class="submission-date">Submitted: 28/6/2024</div>
+                        <div class="status-badge status-review">Under Review</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll to top button -->
+    <div class="scroll-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="report.js"></script>
+    <script src="logout.js"></script>
+</body>
+</html>
