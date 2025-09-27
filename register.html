@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ethiopia Federal Police Forensic Management System</title>
+    <style>
+        /* Global reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #f1f5f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Container card */
+        .login-container {
+            background: #1A365D;
+            color: #fff;
+            padding: 2rem 1rem;
+            border-radius: 10px;
+            width: 360px;
+            max-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            align-items: center;
+            /* center logo and title */
+            text-align: center;
+        }
+
+        /* Logo */
+        .logo {
+            width: 80px;
+            margin-bottom: 1rem;
+        }
+
+        /* Title */
+        h2 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        /* Scrollable form wrapper */
+        .form-wrapper {
+            overflow-y: auto;
+            max-height: 70vh;
+            /* restrict scroll height */
+            padding-right: 5px;
+            /* avoid scrollbar overlap */
+            width: 100%;
+        }
+
+        /* Form */
+        .login-form {
+            text-align: left;
+        }
+
+        .login-form label {
+            font-size: 0.9rem;
+            margin-bottom: 0.3rem;
+            display: block;
+            color: #e2e8f0;
+        }
+
+        .login-form input,
+        select {
+            width: 100%;
+            padding: 0.6rem;
+            border-radius: 6px;
+            border: none;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .password-wrapper {
+            position: relative;
+        }
+
+        .password-wrapper input {
+            width: 100%;
+            padding-right: 2rem;
+        }
+
+        .toggle-password {
+            position: absolute;
+            top: 30%;
+            right: 10px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        /* Remember me */
+        .remember {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            color: #e2e8f0;
+        }
+
+        .remember input[type="checkbox"] {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            width: 16px;
+            height: 16px;
+            border: 2px solid #e2e8f0;
+            border-radius: 4px;
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+            margin: 0;
+        }
+
+        .remember input[type="checkbox"]:checked::after {
+            content: "✔";
+            position: absolute;
+            top: -2px;
+            left: 2px;
+            font-size: 14px;
+            color: #e2e8f0;
+        }
+
+        .remember label {
+            margin-left: 8px;
+            cursor: pointer;
+        }
+
+        /* Button */
+        .btn {
+            width: 100%;
+            padding: 0.7rem;
+            background: #1d4ed8;
+            border: none;
+            border-radius: 6px;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #2563eb;
+        }
+
+        /* Bottom link */
+        .alt-link {
+            font-size: 0.9rem;
+            text-align: center;
+            margin-top: 0.5rem;
+        }
+
+        .alt-link a {
+            color: #93c5fd;
+            text-decoration: none;
+        }
+
+        .alt-link a:hover {
+            text-decoration: underline;
+        }
+
+        /* Conditional groups */
+        .form-group {
+            display: none;
+        }
+
+        /* Hide default scrollbar (but still scrollable) */
+        .form-wrapper::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .form-wrapper::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 3px;
+        }
+
+        .form-wrapper::-webkit-scrollbar-track {
+            background: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <img src="Ethiopia-Federal-Police-Forensic-Management-System/Federal_Police_Commission_of_Ethiopia_Coat_of_Arms_and_Logo-removebg-preview.png"
+            alt="System Logo" class="logo">
+        <h2>Ethiopia Federal Police<br>Forensic Management System</h2>
+
+        <div class="form-wrapper">
+            <form class="login-form" id="signupForm" action="register.php" method="POST">
+
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Full Name" required />
+
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Username" required />
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Email" required />
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Phone Number" required />
+
+                <label for="password">Password</label>
+                <div class="password-wrapper">
+                    <input type="password" id="password" name="password" placeholder="Password" required />
+                    <span class="toggle-password" onclick="togglePassword()">👁</span>
+                </div>
+
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password"
+                    required />
+
+                <label for="role">Role</label>
+                <select id="role" name="role" required>
+                    <option value="">-- Select Role --</option>
+                    <option value="deputy_department">Deputy Main Department</option>
+                    <option value="main_department">Department</option>
+                    <option value="main_class">Main Class</option>
+                    <option value="class">Class</option>
+                    <option value="custodia">Custodia</option>
+                    <option value="lab">Laboratory</option>
+                </select>
+
+                <div class="form-group" id="mainDepartmentGroup">
+                    <label for="mainDepartment">Main Department</label>
+                    <select id="mainDepartment" name="mainDepartment">
+                        <option value="">Select Main Department</option>
+                        <option value="forensic_lab">Forensic Laboratory Department</option>
+                        <option value="crime_investigation">Crime Area Investigation Department</option>
+                    </select>
+                </div>
+
+
+                <div class="form-group" id="mainClassGroup" >
+                    <label for="mainClass">Main Class</label>
+                    <select id="mainClass" name="mainClass">
+                        <option value="">Select Main Class</option>
+                        <option value="fingerprint_crime">Fingerprint & Crime Record Main Class</option>
+                        <option value="forensic_biochemistry">Forensic & Biochemistry Main Class</option>
+                        <option value="physical_forensic">Physical Forensic Main Class</option>
+                        <option value="crime_investigation_main">Crime Area Investigation Main Class</option>
+                    </select>
+                </div>
+
+
+                <div class="form-group" id="classGroup">
+                    <label for="class">Class</label>
+                    <select id="class" name="class">
+                        <option value="">Select Class</option>
+                        <option value="peaceful_fingerprint">Peaceful People Fingerprint Class</option>
+                        <option value="digital_fingerprint">Digital Fingerprint Investigation Class</option>
+                        <option value="crime_record">Crime Record Fingerprint Investigation Class</option>
+                        <option value="hidden_fingerprint">Hidden Fingerprint Investigation Class</option>
+                        <option value="fire_explosion">Fire and Explosion Investigation Class</option>
+                        <option value="chemistry_toxicology">Chemistry and Toxicology Investigation Class</option>
+                        <option value="biology">Biology Investigation Class</option>
+                        <option value="dna">DNA Investigation Class</option>
+                        <option value="weapon_footprint">Weapon and Footprint Class</option>
+                        <option value="digital_investigation">Digital Investigation Class</option>
+                        <option value="document">Document Investigation Class</option>
+                        <option value="cremation">Cremation Investigation Class</option>
+                        <option value="crime_area">Crime Area Investigation Class</option>
+                        <option value="photography">Photography Investigation Class</option>
+                    </select>
+                </div>
+
+                <div class="form-group" id="labGroup">
+                    <label for="lab">Laboratory</label>
+                    <select id="lab" name="lab">
+                        <option value="">Select Laboratory</option>
+                        <option value="peaceful_fingerprint_lab">Peaceful People Fingerprint Laboratory</option>
+                        <option value="digital_fingerprint_lab">Digital Fingerprint Investigation Laboratory</option>
+                        <option value="crime_record_lab">Crime Record Fingerprint Investigation Laboratory</option>
+                        <option value="hidden_fingerprint_lab">Hidden Fingerprint Investigation Laboratory</option>
+                        <option value="fire_explosion_lab">Fire and Explosion Investigation Laboratory</option>
+                        <option value="chemistry_toxicology_lab">Chemistry and Toxicology Investigation Laboratory
+                        </option>
+                        <option value="biology_lab">Biology Investigation Laboratory</option>
+                        <option value="dna_lab">DNA Investigation Laboratory</option>
+                        <option value="weapon_footprint_lab">Weapon and Footprint Laboratory</option>
+                        <option value="digital_investigation_lab">Digital Investigation Laboratory</option>
+                        <option value="document_lab">Document Investigation Laboratory</option>
+                        <option value="cremation_lab">Cremation Investigation Laboratory</option>
+                        <option value="crime_area_lab">Crime Area Investigation Laboratory</option>
+                        <option value="photography_lab">Photography Investigation Laboratory</option>
+                    </select>
+                </div>
+
+                <div class="remember">
+                    <input type="checkbox" id="remember" />
+                    <label for="remember">Remember me</label>
+                </div>
+
+                <button type="submit" class="btn">Sign up</button>
+            </form>
+        </div>
+
+        <p class="alt-link">Already have an account? <a href="login.html">Sign in</a></p>
+    </div>
+
+    <script>
+        function togglePassword() {
+            const password = document.getElementById("password");
+            const confirmPassword = document.getElementById("confirmPassword");
+            [password, confirmPassword].forEach(input => {
+                input.type = input.type === "password" ? "text" : "password";
+            });
+        }
+
+        document.getElementById("role").addEventListener("change", function () {
+            document.getElementById("mainDepartmentGroup").style.display = "none";
+            document.getElementById("classGroup").style.display = "none";
+            document.getElementById("labGroup").style.display = "none";
+
+            if (this.value === "main_department") {
+                document.getElementById("mainDepartmentGroup").style.display = "block";
+            }else if (this.value === "main_class") {
+                document.getElementById("mainClassGroup").style.display = "block";
+            } else if (this.value === "class") {
+                document.getElementById("classGroup").style.display = "block";
+            } else if (this.value === "lab") {
+                document.getElementById("labGroup").style.display = "block";
+            }
+        });
+    </script>
+</body>
+
+</html>

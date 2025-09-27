@@ -1,0 +1,15 @@
+- [x] Create users.json with demo user data
+- [x] Edit users.html to remove hardcoded table rows and make stats dynamic
+- [x] Edit users.js to load JSON data, populate table dynamically, update stats, and maintain search/filter functionality
+- [x] Test by changing number of users in JSON and verify rendering
+- [x] Create databackup.json with backup history data
+- [x] Edit databackup.html to remove hardcoded table rows
+- [x] Create databackup.js to load JSON data and populate table/stats dynamically
+- [x] Add databackup.js script to databackup.html
+- [x] Create settings.json with default settings
+- [x] Create settings.js to load settings from JSON and handle form population/save
+- [x] Create dashboard.json with stats and recent cases data
+- [x] Create dashboard.js to load data and populate stats/table dynamically
+- [x] Edit index.html to remove hardcoded table rows
+- [x] Test all pages by running the server and verifying dynamic loading
+ 

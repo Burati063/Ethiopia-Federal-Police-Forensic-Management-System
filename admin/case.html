@@ -97,15 +97,15 @@
                 <div class="search-filter-section">
                     <div class="search-input-container">
                         <i class="fas fa-search"></i>
-                        <input type="text" placeholder="Search by case ID, title, or investigator...">
+                        <input type="text" id="searchCase" placeholder="Search by case ID, title, or investigator...">
                     </div>
                     
                     <div class="filter-container">
                         <i class="fas fa-filter"></i>
-                        <select class="status-filter">
+                        <select id="statusFilter" class="status-filter">
                             <option value="all">All Status</option>
-                            <option value="active">Active</option>
-                            <option value="in-progress">In Progress</option>
+                            <option value="in-laboratory">In Laboratory</option>
+                            <option value="assigned">Assigned</option>
                             <option value="completed">Completed</option>
                             <option value="overdue">Overdue</option>
                         </select>
@@ -132,30 +132,6 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>CSE-2024-001</td>
-                                <td>Fingerprint analysis required for bank robbery investigation</td>
-                                <td>Federal High Court FF/007/2024</td>
-                                <td><span class="status lab">In Laboratory</span></td>
-                                <td>A. Dr. Tadesse Alemu</td>
-                                <td><button class="action-btn"><i class="fas fa-eye"></i> View Details</button></td>
-                            </tr>
-                            <tr>
-                                <td>CSE-2024-002</td>
-                                <td>DNA Investigation</td>
-                                <td>Addis Ababa Police Station</td>
-                                <td><span class="status completed">Completed</span></td>
-                                <td>A. Dr. Meron Bekele</td>
-                                <td><button class="action-btn"><i class="fas fa-eye"></i> View Details</button></td>
-                            </tr>
-                            <tr>
-                                <td>CSE-2024-003</td>
-                                <td>Document Forgery Investigation</td>
-                                <td>Oromia Regional Police DOC/083/2024</td>
-                                <td><span class="status assigned">Assigned</span></td>
-                                <td>A. Alo Girma Wolde</td>
-                                <td><button class="action-btn"><i class="fas fa-eye"></i> View Details</button></td>
-                            </tr>
                         </tbody>
                     </table>
                 </div>

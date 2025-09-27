@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ethiopia Federal Police Forensic Management System</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="login-container">
+        <!-- Logo -->
+        <img src="assets/Federal_Police_Commission_of_Ethiopia_Coat_of_Arms_and_Logo-removebg-preview.png" alt="System Logo" class="logo">
+
+        <!-- Title -->
+        <h2>Ethiopia Federal Police<br>Forensic Management System</h2>
+
+        <!-- Form -->
+        <form class="login-form" action="login.php" method="POST">
+            
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Username" required />
+
+            <label for="password">Password</label>
+            <div class="password-wrapper">
+                <input type="password" id="password" placeholder="Password" required />
+                <span class="toggle-password" onclick="togglePassword()">👁</span>
+            </div>
+
+          
+            <div class="remember">
+                <input type="checkbox" id="remember" />
+                <label for="remember">Remember me</label>
+            </div>
+
+            <button type="submit" class="btn">Sign in</button>
+        </form>
+
+        <p class="alt-link">Don't you have an account? <a href="register.html">Sign up</a></p>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

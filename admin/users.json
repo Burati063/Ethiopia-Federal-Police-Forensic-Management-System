@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Adi 4444",
+    "username": "admin",
+    "role": "ADMIN",
+    "department": "System Administration",
+    "email": "admin@efpf.gov.et",
+    "phone": "+251911123456",
+    "status": "Active",
+    "lastLogin": "1/21/2024"
+  },
+  {
+    "name": "Sara McKennen",
+    "username": "custodia",
+    "role": "CUSTODIA OFFICER",
+    "department": "Custodia Main Class",
+    "email": "custodia@efpf.gov.et",
+    "phone": "+251911234567",
+    "status": "Active",
+    "lastLogin": "1/21/2024"
+  },
+  {
+    "name": "Dr. Tadesse Alemu",
+    "username": "labtech",
+    "role": "LAB TECHNICIAN",
+    "department": "Fingerprint Investigation Class",
+    "email": "lab.tech@efpf.gov.et",
+    "phone": "+251911346678",
+    "status": "Active",
+    "lastLogin": "1/20/2024"
+  },
+  {
+    "name": "Dr. Meron Belele",
+    "username": "meron.belele",
+    "role": "LAB TECHNICIAN",
+    "department": "Biology Investigation Class",
+    "email": "meron.belele@efpf.gov.et",
+    "phone": "+251911456789",
+    "status": "Active",
+    "lastLogin": "1/19/2024"
+  },
+  {
+    "name": "Alo Girma Wolde",
+    "username": "girma.wolde",
+    "role": "LAB TECHNICIAN",
+    "department": "Document Investigation Class",
+    "email": "girma.wolde@efpf.gov.et",
+    "phone": "+251911567890",
+    "status": "Active",
+    "lastLogin": "1/18/2024"
+  },
+  {
+    "name": "Alo Belele Tadesse",
+    "username": "belele.tadesse",
+    "role": "DEPARTMENT HEAD",
+    "department": "Forensic Investigation Laboratory Department",
+    "email": "belele.tadesse@efpf.gov.et",
+    "phone": "+251911678901",
+    "status": "Active",
+    "lastLogin": "1/21/2024"
+  },
+  {
+    "name": "Wiro Almaz Getachew",
+    "username": "almaz.getachew",
+    "role": "VIEW ONLY",
+    "department": "Crime Area Investigation Department",
+    "email": "almaz.getachew@efpf.gov.et",
+    "phone": "+251911789012",
+    "status": "Inactive",
+    "lastLogin": "1/15/2024"
+  }
+]

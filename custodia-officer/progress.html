@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Tracking</title>
+    <!-- Font Awesome for modern icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f8fafc;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h1 {
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        /* Register Button */
+        #registerCaseBtn {
+            background-color: #3b82f6;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: background 0.3s;
+        }
+
+        #registerCaseBtn:hover {
+            background-color: #2563eb;
+        }
+
+        /* Stats Cards */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .card h2 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .blue {
+            background: #3b82f6;
+        }
+
+        .yellow {
+            background: #f59e0b;
+        }
+
+        .green {
+            background: #10b981;
+        }
+
+        .red {
+            background: #ef4444;
+        }
+
+        .card i {
+            font-size: 2rem;
+        }
+
+        /* Filters */
+        .filters {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .filters input,
+        .filters select {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        /* Case Card */
+        .case-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .case-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .case-header h3 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+
+        .status {
+            background: #3b82f6;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+
+        .progress {
+            background: #e5e7eb;
+            height: 12px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        .progress-bar {
+            height: 12px;
+            border-radius: 8px;
+            background: #3b82f6;
+        }
+
+        .stage {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .timeline {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0 0;
+            border-left: 3px solid #ddd;
+        }
+
+        .timeline li {
+            padding: 10px 15px;
+            position: relative;
+            font-size: 0.95rem;
+        }
+
+        .timeline li::before {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 15px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ccc;
+        }
+
+        .timeline li.done::before {
+            background: #10b981;
+        }
+
+        .timeline li span {
+            display: block;
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        /* Case Registration Form */
+        .case-registration {
+            display: none;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            margin-bottom: 30px;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .case-registration input,
+        .case-registration textarea,
+        .case-registration select {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .case-registration button {
+            background-color: #10b981;
+            color: white;
+            padding: 14px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+
+        .case-registration button:hover {
+            background-color: #059669;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Progress Tracking</h1>
+        <p class="subtitle">Real Time Progress Tracking</p>
+
+        <!-- Register New Case Button -->
+        <button id="registerCaseBtn"><i class="fa-solid fa-plus"></i> Register New Case</button>
+
+        <!-- Case Registration Form -->
+        <div class="case-registration" id="caseRegistrationPage">
+            <h2>Case Registration</h2>
+            <form>
+                <input type="text" placeholder="Case Title" required>
+                <input type="text" placeholder="Investigator Name" required>
+                <textarea placeholder="Case Description" rows="4" required></textarea>
+                <select>
+                    <option>Status: In Lab</option>
+                    <option>Status: In Progress</option>
+                    <option>Status: Completed</option>
+                </select>
+                <button type="submit">Submit Case</button>
+            </form>
+        </div>
+
+        <!-- Stats Cards -->
+        <div class="stats">
+            <div class="card blue"><i class="fa-solid fa-folder-open"></i>
+                <h2>23</h2>
+                <p>Active Cases</p>
+            </div>
+            <div class="card yellow"><i class="fa-solid fa-spinner"></i>
+                <h2>15</h2>
+                <p>In Progress</p>
+            </div>
+            <div class="card green"><i class="fa-solid fa-check"></i>
+                <h2>8</h2>
+                <p>Completed</p>
+            </div>
+            <div class="card red"><i class="fa-solid fa-triangle-exclamation"></i>
+                <h2>2</h2>
+                <p>Overdue</p>
+            </div>
+        </div>
+
+        <!-- Search + Filter -->
+        <div class="filters">
+            <input type="text" placeholder="Search by case ID, title, or investigator...">
+            <select>
+                <option>All Status</option>
+                <option>In Progress</option>
+                <option>Completed</option>
+                <option>Overdue</option>
+            </select>
+        </div>
+
+        <!-- Example Case Card -->
+        <div class="case-card">
+            <div class="case-header">
+                <h3>CSE-2024-001: Fingerprint Analysis - Bank Robbery</h3>
+                <span class="status">IN LAB</span>
+            </div>
+            <p><strong>Dr. Tadesse Alemu</strong> · Fingerprint Investigation · Expected: 1/25/2024</p>
+
+            <div class="progress">
+                <div class="progress-bar" style="width: 90%;"></div>
+            </div>
+            <p class="stage">Current Stage: Analysis Complete</p>
+
+            <ul class="timeline">
+                <li class="done">Case Registered <span>1/15/2024 at 12:00 PM</span></li>
+                <li class="done">Assigned to Investigator <span>1/15/2024 at 12:30 PM</span></li>
+                <li class="done">Evidence Received <span>1/16/2024 at 12:15 PM</span></li>
+                <li class="done">Analysis Started <span>1/16/2024 at 2:00 PM</span></li>
+                <li class="done">Analysis Complete <span>1/20/2024 at 7:30 PM</span></li>
+                <li>Report Generation</li>
+                <li>Review & Approval</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        const registerBtn = document.getElementById('registerCaseBtn');
+        const casePage = document.getElementById('caseRegistrationPage');
+
+        registerBtn.addEventListener('click', () => {
+            casePage.style.display = 'block'; // Show the case registration form
+            registerBtn.style.display = 'none'; // Hide button after click
+            window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top
+        });
+    </script>
+</body>
+
+</html>

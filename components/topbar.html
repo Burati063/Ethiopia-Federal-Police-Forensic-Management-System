@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Bar</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .topbar {
+            height: 60px;
+            background: #0f2c56;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            position: fixed;
+            left: 220px;
+            /* account for sidebar width */
+            right: 0;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* Search */
+        .search-box {
+            flex: 1;
+            margin: 0 20px;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 8px 12px;
+            border-radius: 6px;
+            border: none;
+            outline: none;
+            font-size: 0.9rem;
+        }
+
+        /* Right section */
+        .topbar-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .topbar-right .icon {
+            font-size: 1.2rem;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .topbar-right .icon span {
+            position: absolute;
+            top: -6px;
+            right: -10px;
+            background: red;
+            color: white;
+            font-size: 0.7rem;
+            padding: 2px 5px;
+            border-radius: 50%;
+        }
+
+        .topbar-right .profile {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .topbar-right .profile img {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+        }
+    </style>
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="topbar">
+        <!-- Search -->
+        <div class="search-box">
+            <input type="text" placeholder="Search here">
+        </div>
+
+        <!-- Right -->
+        <div class="topbar-right">
+            <div class="icon">
+                <i class="fas fa-bell"></i>
+                <span>3</span>
+            </div>
+            <div class="lang">Eng</div>
+            <div class="profile">
+                <img src="https://via.placeholder.com/32" alt="User">
+                <span>CUSTODIA OFFICER</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Example: click bell to show alert
+        document.querySelector(".fa-bell").addEventListener("click", () => {
+            alert("Notifications clicked!");
+        });
+    </script>
+
+</body>
+
+</html>
