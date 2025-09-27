@@ -199,7 +199,7 @@
         <h2>Ethiopia Federal Police<br>Forensic Management System</h2>
 
         <div class="form-wrapper">
-            <form class="login-form" id="signupForm">
+            <form class="login-form" id="signupForm" action="register.php" method="POST">
 
                 <label for="fullname">Full Name</label>
                 <input type="text" id="fullname" name="fullname" placeholder="Full Name" required />
@@ -242,6 +242,19 @@
                         <option value="crime_investigation">Crime Area Investigation Department</option>
                     </select>
                 </div>
+
+
+                <div class="form-group" id="mainClassGroup" >
+                    <label for="mainClass">Main Class</label>
+                    <select id="mainClass" name="mainClass">
+                        <option value="">Select Main Class</option>
+                        <option value="fingerprint_crime">Fingerprint & Crime Record Main Class</option>
+                        <option value="forensic_biochemistry">Forensic & Biochemistry Main Class</option>
+                        <option value="physical_forensic">Physical Forensic Main Class</option>
+                        <option value="crime_investigation_main">Crime Area Investigation Main Class</option>
+                    </select>
+                </div>
+
 
                 <div class="form-group" id="classGroup">
                     <label for="class">Class</label>
@@ -314,6 +327,8 @@
 
             if (this.value === "main_department") {
                 document.getElementById("mainDepartmentGroup").style.display = "block";
+            }else if (this.value === "main_class") {
+                document.getElementById("mainClassGroup").style.display = "block";
             } else if (this.value === "class") {
                 document.getElementById("classGroup").style.display = "block";
             } else if (this.value === "lab") {

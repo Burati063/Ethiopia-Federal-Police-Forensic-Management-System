@@ -1,0 +1,23 @@
+[
+  {
+    "id": "CSE-2024-001",
+    "type": "Fingerprint analysis required for bank robbery investigation",
+    "source": "Federal High Court FF/007/2024",
+    "status": "In Laboratory",
+    "assignedTo": "A. Dr. Tadesse Alemu"
+  },
+  {
+    "id": "CSE-2024-002",
+    "type": "DNA Investigation",
+    "source": "Addis Ababa Police Station",
+    "status": "Completed",
+    "assignedTo": "A. Dr. Meron Bekele"
+  },
+  {
+    "id": "CSE-2024-003",
+    "type": "Document Forgery Investigation",
+    "source": "Oromia Regional Police DOC/083/2024",
+    "status": "Assigned",
+    "assignedTo": "A. Alo Girma Wolde"
+  }
+]

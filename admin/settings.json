@@ -1,0 +1,31 @@
+{
+  "general": {
+    "systemName": "Ethiopian Federal Police Forensic Management System",
+    "defaultLanguage": "English",
+    "timezone": "Africa/Addis_Ababa (EAT)",
+    "dateFormat": "DD/MM/YYYY"
+  },
+  "security": {
+    "sessionTimeout": 30,
+    "passwordMinLength": 8,
+    "specialChars": true,
+    "maxLoginAttempts": 3,
+    "lockoutDuration": 15
+  },
+  "notifications": {
+    "systemAlerts": true,
+    "backupNotifications": true,
+    "notificationSound": "Default"
+  },
+  "caseManagement": {
+    "casePrefix": "CSE",
+    "defaultInvestigationDays": 14,
+    "autoCaseAssignment": false,
+    "approvalForClosure": true
+  },
+  "systemInfo": {
+    "version": "1.0.0",
+    "databaseStatus": "Connected",
+    "lastChange": "2 hours ago"
+  }
+}

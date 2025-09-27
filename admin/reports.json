@@ -1,0 +1,112 @@
+[
+  {
+    "id": "CSE-2024-001",
+    "title": "Fingerprint Analysis Report - Bank Robbery Investigation",
+    "investigator": "A. Dr. Tadeese Alemu",
+    "department": "Department: Fingerprint investigation",
+    "findings": "Positive match found with suspect fingerprints",
+    "conclusion": "Evidence supports prosecution case",
+    "submissionDate": "Submitted: 17/3/2024<br>Reviewed by Ato Girma Wolde on 1/21/2024",
+    "status": "Completed",
+    "statusClass": "status-completed"
+  },
+  {
+    "id": "CSE-2024-002",
+    "title": "DNA Analysis Report - Murder Case Evidence",
+    "investigator": "A. Dr. Meron Bekele",
+    "department": "Department: Biology investigation",
+    "findings": "DNA profile extracted from blood samples",
+    "conclusion": "Pending database comparison",
+    "submissionDate": "Submitted: 1/19/2024",
+    "status": "Under Review",
+    "statusClass": "status-review"
+  },
+  {
+    "id": "CSE-2024-003",
+    "title": "Document Forensics Report - Fraud Investigation",
+    "investigator": "A. Ato Girma Wolde",
+    "department": "Department: Document investigation",
+    "findings": "Analysis in progress",
+    "conclusion": "Preliminary findings suggest document alteration",
+    "submissionDate": "Submitted: Not yet submitted",
+    "status": "IN PROGRESS",
+    "statusClass": "status-progress"
+  },
+  {
+    "id": "CSE-2024-004",
+    "title": "Ballistics Report - Shooting Incident",
+    "investigator": "A. Dr. Solomon Tesfaye",
+    "department": "Department: Firearms investigation",
+    "findings": "Bullet matched to suspect's firearm",
+    "conclusion": "Weapon was used in the incident",
+    "submissionDate": "Submitted: 12/4/2024<br>Reviewed by Ato Girma Wolde on 15/4/2024",
+    "status": "Completed",
+    "statusClass": "status-completed"
+  },
+  {
+    "id": "CSE-2024-005",
+    "title": "Digital Forensics Report - Cyber Crime",
+    "investigator": "A. Dr. Hanna Girma",
+    "department": "Department: Digital investigation",
+    "findings": "Data extraction from devices in progress",
+    "conclusion": "Awaiting full data analysis",
+    "submissionDate": "Submitted: Not yet submitted",
+    "status": "IN PROGRESS",
+    "statusClass": "status-progress"
+  },
+  {
+    "id": "CSE-2024-006",
+    "title": "Toxicology Report - Suspicious Death",
+    "investigator": "A. Dr. Michael Asrat",
+    "department": "Department: Chemical investigation",
+    "findings": "High levels of poison detected in samples",
+    "conclusion": "Awaiting secondary confirmation",
+    "submissionDate": "Submitted: 5/5/2024",
+    "status": "Under Review",
+    "statusClass": "status-review"
+  },
+  {
+    "id": "CSE-2024-007",
+    "title": "Crime Scene Analysis - Burglary Case",
+    "investigator": "A. Inspector Daniel Mekonnen",
+    "department": "Department: Crime Scene investigation",
+    "findings": "Multiple points of entry, professional tools used",
+    "conclusion": "Organized criminal activity suspected",
+    "submissionDate": "Submitted: 22/5/2024<br>Reviewed by Ato Girma Wolde on 25/5/2024",
+    "status": "Completed",
+    "statusClass": "status-completed"
+  },
+  {
+    "id": "CSE-2024-008",
+    "title": "Financial Records Analysis - Embezzlement",
+    "investigator": "A. Dr. Sara Abebe",
+    "department": "Department: Financial investigation",
+    "findings": "Multiple suspicious transactions identified",
+    "conclusion": "Further analysis of bank records needed",
+    "submissionDate": "Submitted: Not yet submitted",
+    "status": "IN PROGRESS",
+    "statusClass": "status-progress"
+  },
+  {
+    "id": "CSE-2024-009",
+    "title": "Surveillance Analysis - Kidnapping Case",
+    "investigator": "A. Inspector Helen Teshome",
+    "department": "Department: Surveillance investigation",
+    "findings": "Vehicle identified from CCTV footage, license plate partially visible",
+    "conclusion": "Vehicle registered to known associate of suspect",
+    "submissionDate": "Submitted: 10/6/2024<br>Reviewed by Ato Girma Wolde on 12/6/2024",
+    "status": "Completed",
+    "statusClass": "status-completed"
+  },
+  {
+    "id": "CSE-2024-010",
+    "title": "Psychological Profile - Serial Offender",
+    "investigator": "A. Dr. Samuel Getachew",
+    "department": "Department: Behavioral analysis",
+    "findings": "Pattern suggests organized offender with above average intelligence",
+    "conclusion": "Likely to have prior criminal record, possible military background",
+    "submissionDate": "Submitted: 28/6/2024",
+    "status": "Under Review",
+    "statusClass": "status-review"
+  }
+]

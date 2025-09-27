@@ -1,0 +1,64 @@
+{
+  "stats": {
+    "latestSize": "2.4 GB",
+    "successRate": "99.2%",
+    "avgDuration": "15 min",
+    "totalBackups": 156,
+    "successful": 152,
+    "failed": 4,
+    "storageUsed": "45.2 GB"
+  },
+  "backups": [
+    {
+      "type": "Automatic Backup",
+      "date": "1/21/2024, 5:00:00 AM",
+      "status": "Completed",
+      "statusClass": "completed",
+      "dataSummary": "Cases: 127<br/>Investigations: 89<br/>Users: 45<br/>Reports: 203",
+      "sizeDuration": "Size: 2.4 GB<br/>Duration: 15 minutes",
+      "hasActions": true,
+      "error": null
+    },
+    {
+      "type": "Manual Backup",
+      "date": "1/20/2024, 5:30:00 PM",
+      "status": "Completed",
+      "statusClass": "completed",
+      "dataSummary": "Cases: 125<br/>Investigations: 87<br/>Users: 45<br/>Reports: 198",
+      "sizeDuration": "Size: 2.3 GB<br/>Duration: 12 minutes",
+      "hasActions": true,
+      "error": null
+    },
+    {
+      "type": "Automatic Backup",
+      "date": "1/19/2024, 5:00:00 AM",
+      "status": "Failed",
+      "statusClass": "failed",
+      "dataSummary": "N/A",
+      "sizeDuration": "Size: N/A<br/>Duration: N/A",
+      "hasActions": false,
+      "error": "Database connection timeout"
+    },
+    {
+      "type": "Automatic Backup",
+      "date": "1/18/2024, 5:00:00 AM",
+      "status": "Completed",
+      "statusClass": "completed",
+      "dataSummary": "Cases: 123<br/>Investigations: 85<br/>Users: 44<br/>Reports: 195",
+      "sizeDuration": "Size: 2.2 GB<br/>Duration: 14 minutes",
+      "hasActions": true,
+      "error": null
+    },
+    {
+      "type": "Automatic Backup",
+      "date": "1/17/2024, 5:00:00 AM",
+      "status": "In Progress",
+      "statusClass": "progress",
+      "dataSummary": "N/A",
+      "sizeDuration": "Size: N/A<br/>Duration: N/A",
+      "hasActions": false,
+      "progress": 65,
+      "error": null
+    }
+  ]
+}

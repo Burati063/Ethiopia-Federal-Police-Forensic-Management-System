@@ -1,0 +1,172 @@
+{
+  "stats": {
+    "activeCases": 23,
+    "inProgress": 15,
+    "completed": 8,
+    "overdue": 2
+  },
+  "cases": [
+    {
+      "id": "CSE-2024-001",
+      "title": "Fingerprint Analysis - Bank Robbery",
+      "investigator": "Q. D. Todesze Alemu",
+      "department": "Fingerprint Investigation",
+      "expectedDate": "1/25/2024",
+      "currentStage": "Analysis Complete",
+      "progressPercentage": 90,
+      "progressStatus": "IN LAB",
+      "timeline": [
+        {
+          "title": "Case Registered",
+          "by": "Sirin Mekreven",
+          "date": "1/15/2024 at 1:30:00 PM",
+          "status": "completed"
+        },
+        {
+          "title": "Assigned to Investigator",
+          "by": "Sirin Mekreven",
+          "date": "1/15/2024 at 3:20:00 PM",
+          "status": "completed"
+        },
+        {
+          "title": "Evidence Received",
+          "by": "Dr. Todesze Alemu",
+          "date": "1/16/2024 at 12:13:00 PM",
+          "status": "completed"
+        },
+        {
+          "title": "Analysis Started",
+          "by": "Dr. Todesze Alemu",
+          "date": "1/18/2024 at 2:00:00 PM",
+          "status": "completed"
+        },
+        {
+          "title": "Analysis Complete",
+          "by": "Dr. Todesze Alemu",
+          "date": "1/20/2024 at 7:30:00 PM",
+          "status": "completed"
+        },
+        {
+          "title": "Report Generation",
+          "by": "Dr. Todesze Alemu",
+          "date": "In Progress",
+          "status": "current"
+        },
+        {
+          "title": "Review & Approval",
+          "by": "Doremans Head",
+          "date": "Not Started",
+          "status": "upcoming"
+        }
+      ]
+    },
+    {
+      "id": "CSE-2024-002",
+      "title": "DNA Analysis - Murder Case",
+      "investigator": "A. Dr. Meron Bekele",
+      "department": "Biology Investigation",
+      "expectedDate": "2/10/2024",
+      "currentStage": "Sample Processing",
+      "progressPercentage": 60,
+      "progressStatus": "IN LAB",
+      "timeline": [
+        {
+          "title": "Case Registered",
+          "by": "Admin User",
+          "date": "1/20/2024 at 9:00:00 AM",
+          "status": "completed"
+        },
+        {
+          "title": "Assigned to Investigator",
+          "by": "Admin User",
+          "date": "1/20/2024 at 10:30:00 AM",
+          "status": "completed"
+        },
+        {
+          "title": "Evidence Received",
+          "by": "A. Dr. Meron Bekele",
+          "date": "1/22/2024 at 11:00:00 AM",
+          "status": "completed"
+        },
+        {
+          "title": "Sample Processing",
+          "by": "A. Dr. Meron Bekele",
+          "date": "1/25/2024 at 2:00:00 PM",
+          "status": "current"
+        },
+        {
+          "title": "DNA Extraction",
+          "by": "A. Dr. Meron Bekele",
+          "date": "Not Started",
+          "status": "upcoming"
+        },
+        {
+          "title": "Analysis & Matching",
+          "by": "A. Dr. Meron Bekele",
+          "date": "Not Started",
+          "status": "upcoming"
+        },
+        {
+          "title": "Report Generation",
+          "by": "A. Dr. Meron Bekele",
+          "date": "Not Started",
+          "status": "upcoming"
+        }
+      ]
+    },
+    {
+      "id": "CSE-2024-003",
+      "title": "Document Forensics - Fraud Case",
+      "investigator": "A. Ato Girma Wolde",
+      "department": "Document Investigation",
+      "expectedDate": "3/5/2024",
+      "currentStage": "Document Examination",
+      "progressPercentage": 40,
+      "progressStatus": "IN PROGRESS",
+      "timeline": [
+        {
+          "title": "Case Registered",
+          "by": "Admin User",
+          "date": "1/25/2024 at 8:45:00 AM",
+          "status": "completed"
+        },
+        {
+          "title": "Assigned to Investigator",
+          "by": "Admin User",
+          "date": "1/25/2024 at 9:15:00 AM",
+          "status": "completed"
+        },
+        {
+          "title": "Evidence Received",
+          "by": "A. Ato Girma Wolde",
+          "date": "1/28/2024 at 1:00:00 PM",
+          "status": "completed"
+        },
+        {
+          "title": "Document Examination",
+          "by": "A. Ato Girma Wolde",
+          "date": "1/30/2024 at 10:00:00 AM",
+          "status": "current"
+        },
+        {
+          "title": "Forensic Analysis",
+          "by": "A. Ato Girma Wolde",
+          "date": "Not Started",
+          "status": "upcoming"
+        },
+        {
+          "title": "Report Preparation",
+          "by": "A. Ato Girma Wolde",
+          "date": "Not Started",
+          "status": "upcoming"
+        },
+        {
+          "title": "Review & Approval",
+          "by": "Department Head",
+          "date": "Not Started",
+          "status": "upcoming"
+        }
+      ]
+    }
+  ]
+}
