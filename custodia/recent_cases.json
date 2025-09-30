@@ -1,0 +1,74 @@
+[
+  {
+    "id": "CSE-2024-001",
+    "description": "Fingerprint Analysis",
+    "source": "Police Station",
+    "type": "Fingerprint Investigation",
+    "quantity": 2,
+    "status": "inlab",
+    "assignedTo": "Dr. Tadesse"
+  },
+  {
+    "id": "CSE-2024-002",
+    "description": "DNA Analysis",
+    "source": "Court",
+    "type": "Biology Investigation",
+    "quantity": 2,
+    "status": "assigned",
+    "assignedTo": "Ato Girma"
+  },
+  {
+    "id": "CSE-2024-003",
+    "description": "Document Forensics",
+    "source": "Police Station",
+    "type": "Biology Investigation",
+    "quantity": 1,
+    "status": "completed",
+    "assignedTo": "Dr. Tadesse"
+  },
+  {
+    "id": "CSE-2024-004",
+    "description": "DNA Analysis",
+    "source": "Court",
+    "type": "Document Investigation",
+    "quantity": 3,
+    "status": "inlab",
+    "assignedTo": "Dr. Meron"
+  },
+  {
+    "id": "CSE-2024-005",
+    "description": "Document Forensics",
+    "source": "Court",
+    "type": "Document Investigation",
+    "quantity": 4,
+    "status": "assigned",
+    "assignedTo": "Ato Girma"
+  },
+  {
+    "id": "CSE-2024-006",
+    "description": "Document Forensics",
+    "source": "Police Station",
+    "type": "Chemistry Investigation",
+    "quantity": 1,
+    "status": "completed",
+    "assignedTo": "Dr. Meron"
+  },
+  {
+    "id": "CSE-2024-007",
+    "description": "DNA Analysis",
+    "source": "Court",
+    "type": "Document Investigation",
+    "quantity": 1,
+    "status": "inlab",
+    "assignedTo": "Ato Girma"
+  },
+  {
+    "id": "CSE-2024-008",
+    "description": "Fingerprint Analysis",
+    "source": "Police Station",
+    "type": "Biology Investigation",
+    "quantity": 2,
+    "status": "completed",
+    "assignedTo": "Dr. Tadesse"
+  }
+]

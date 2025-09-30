@@ -1,0 +1,46 @@
+{
+  "forensic": {
+    "name": "Forensic Laboratory Department",
+    "mainClasses": {
+      "fingerprint": {
+        "name": "Fingerprint & Crime Record Main Class",
+        "classes": [
+          "Peaceful People Fingerprint laboratory",
+          "Digital Fingerprint Investigation laboratory",
+          "Crime Record Fingerprint Investigation laboratory",
+          "Hidden Fingerprint Investigation laboratory"
+        ]
+      },
+      "biochemistry": {
+        "name": "Forensic & Biochemistry Main Class",
+        "classes": [
+          "Fire and Explosion Investigation laboratory",
+          "Chemistry and Toxicology Investigation laboratory",
+          "Biology Investigation laboratory",
+          "DNA Investigation laboratory"
+        ]
+      },
+      "physical": {
+        "name": "Physical Forensic Main Class",
+        "classes": [
+          "Weapon and Footprint laboratory",
+          "Digital Investigation laboratory",
+          " Document Investigation laboratory"
+        ]
+      }
+    }
+  },
+  "crime": {
+    "name": "Crime Area Investigation Department",
+    "mainClasses": {
+      "crime": {
+        "name": "Crime Area Investigation Main Class",
+        "classes": [
+          "Cremation Investigation laboratory",
+          "Crime Area Investigation laboratory",
+          "Photography Investigation laboratory"
+        ]
+      }
+    }
+  }
+}

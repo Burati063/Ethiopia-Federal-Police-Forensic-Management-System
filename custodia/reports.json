@@ -1,0 +1,110 @@
+[
+  {
+    "status": "completed",
+    "title": "Fingerprint Analysis Report - Bank Robbery Investigation",
+    "id": "CSE-2024-001",
+    "investigator": "A. Dr. Tadeese Alemu",
+    "department": "Fingerprint investigation",
+    "findings": "Positive match found with suspect fingerprints",
+    "conclusion": "Evidence supports prosecution case",
+    "submissionDate": "17/3/2024",
+    "reviewedBy": "Ato Girma Wolde",
+    "reviewDate": "1/21/2024"
+  },
+  {
+    "status": "review",
+    "title": "DNA Analysis Report - Murder Case Evidence",
+    "id": "CSE-2024-002",
+    "investigator": "A. Dr. Meron Bekele",
+    "department": "Biology investigation",
+    "findings": "DNA profile extracted from blood samples",
+    "conclusion": "Pending database comparison",
+    "submissionDate": "1/19/2024"
+  },
+  {
+    "status": "progress",
+    "title": "Document Forensics Report - Fraud Investigation",
+    "id": "CSE-2024-003",
+    "investigator": "A. Ato Girma Wolde",
+    "department": "Document investigation",
+    "findings": "Analysis in progress",
+    "conclusion": "Preliminary findings suggest document alteration",
+    "submissionDate": "Not yet submitted"
+  },
+  {
+    "status": "completed",
+    "title": "Ballistics Report - Shooting Incident",
+    "id": "CSE-2024-004",
+    "investigator": "A. Dr. Solomon Tesfaye",
+    "department": "Firearms investigation",
+    "findings": "Bullet matched to suspect's firearm",
+    "conclusion": "Weapon was used in the incident",
+    "submissionDate": "12/4/2024",
+    "reviewedBy": "Ato Girma Wolde",
+    "reviewDate": "15/4/2024"
+  },
+  {
+    "status": "progress",
+    "title": "Digital Forensics Report - Cyber Crime",
+    "id": "CSE-2024-005",
+    "investigator": "A. Dr. Hanna Girma",
+    "department": "Digital investigation",
+    "findings": "Data extraction from devices in progress",
+    "conclusion": "Awaiting full data analysis",
+    "submissionDate": "Not yet submitted"
+  },
+  {
+    "status": "review",
+    "title": "Toxicology Report - Suspicious Death",
+    "id": "CSE-2024-006",
+    "investigator": "A. Dr. Michael Asrat",
+    "department": "Chemical investigation",
+    "findings": "High levels of poison detected in samples",
+    "conclusion": "Awaiting secondary confirmation",
+    "submissionDate": "5/5/2024"
+  },
+  {
+    "status": "completed",
+    "title": "Crime Scene Analysis - Burglary Case",
+    "id": "CSE-2024-007",
+    "investigator": "A. Inspector Daniel Mekonnen",
+    "department": "Crime Scene investigation",
+    "findings": "Multiple points of entry, professional tools used",
+    "conclusion": "Organized criminal activity suspected",
+    "submissionDate": "22/5/2024",
+    "reviewedBy": "Ato Girma Wolde",
+    "reviewDate": "25/5/2024"
+  },
+  {
+    "status": "progress",
+    "title": "Financial Records Analysis - Embezzlement",
+    "id": "CSE-2024-008",
+    "investigator": "A. Dr. Sara Abebe",
+    "department": "Financial investigation",
+    "findings": "Multiple suspicious transactions identified",
+    "conclusion": "Further analysis of bank records needed",
+    "submissionDate": "Not yet submitted"
+  },
+  {
+    "status": "completed",
+    "title": "Surveillance Analysis - Kidnapping Case",
+    "id": "CSE-2024-009",
+    "investigator": "A. Inspector Helen Teshome",
+    "department": "Surveillance investigation",
+    "findings": "Vehicle identified from CCTV footage, license plate partially visible",
+    "conclusion": "Vehicle registered to known associate of suspect",
+    "submissionDate": "10/6/2024",
+    "reviewedBy": "Ato Girma Wolde",
+    "reviewDate": "12/6/2024"
+  },
+  {
+    "status": "review",
+    "title": "Psychological Profile - Serial Offender",
+    "id": "CSE-2024-010",
+    "investigator": "A. Dr. Samuel Getachew",
+    "department": "Behavioral analysis",
+    "findings": "Pattern suggests organized offender with above average intelligence",
+    "conclusion": "Likely to have prior criminal record, possible military background",
+    "submissionDate": "28/6/2024"
+  }
+]

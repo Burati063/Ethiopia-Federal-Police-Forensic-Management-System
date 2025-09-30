@@ -1,0 +1,61 @@
+{
+  "stats": {
+    "totalCases": 316,
+    "pending": 300,
+    "completed": 5,
+    "assigned": 8,
+    "activeInvestigators": 3
+  },
+  "recentCases": [
+    {
+      "id": "CSE-2024-001",
+      "description": "Fingerprint Analysis - Bank Robbery Case",
+      "type": "Fingerprint Investigation",
+      "status": "In Laboratory",
+      "statusClass": "lab",
+      "priority": "High",
+      "priorityClass": "high",
+      "assignedTo": "Dr. Tadeese Alemu"
+    },
+    {
+      "id": "CSE-2024-002",
+      "description": "DNA Analysis - Murder Investigation",
+      "type": "Biology Investigation",
+      "status": "Completed",
+      "statusClass": "completed",
+      "priority": "Critical",
+      "priorityClass": "critical",
+      "assignedTo": "Dr. Meron Bekele"
+    },
+    {
+      "id": "CSE-2024-003",
+      "description": "Document Forensics - Fraud Case",
+      "type": "Document Investigation",
+      "status": "Assigned",
+      "statusClass": "assigned",
+      "priority": "Medium",
+      "priorityClass": "medium",
+      "assignedTo": "Ato Girma Wolde"
+    },
+    {
+      "id": "CSE-2024-004",
+      "description": "Ballistics Analysis - Shooting Incident",
+      "type": "Firearms Investigation",
+      "status": "In Laboratory",
+      "statusClass": "lab",
+      "priority": "High",
+      "priorityClass": "high",
+      "assignedTo": "Dr. Solomon Tesfaye"
+    },
+    {
+      "id": "CSE-2024-005",
+      "description": "Digital Forensics - Cyber Crime",
+      "type": "Digital Investigation",
+      "status": "Assigned",
+      "statusClass": "assigned",
+      "priority": "Critical",
+      "priorityClass": "critical",
+      "assignedTo": "Dr. Hanna Girma"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+[
+  {
+    "id": "CSE-2024-001",
+    "title": "Fingerprint Analysis - Burglary Case",
+    "senderOrganization": "Police Station",
+    "investigationType": "Fingerprint Investigation",
+    "assignedTo": "Dr. Tadesse",
+    "status": "active"
+  },
+  {
+    "id": "CSE-2024-002",
+    "title": "DNA Analysis - Homicide Case",
+    "senderOrganization": "Court",
+    "investigationType": "Biology Investigation",
+    "assignedTo": "Ato Girma",
+    "status": "active"
+  },
+  {
+    "id": "CSE-2024-003",
+    "title": "Document Forensics - Fraud Case",
+    "senderOrganization": "Police Station",
+    "investigationType": "Document Investigation",
+    "assignedTo": "Dr. Tadesse",
+    "status": "inactive"
+  },
+  {
+    "id": "CSE-2024-004",
+    "title": "DNA Analysis - Sexual Assault Case",
+    "senderOrganization": "Court",
+    "investigationType": "Biology Investigation",
+    "assignedTo": "Dr. Meron",
+    "status": "active"
+  },
+  {
+    "id": "CSE-2024-005",
+    "title": "Document Forensics - Forgery Case",
+    "senderOrganization": "Court",
+    "investigationType": "Document Investigation",
+    "assignedTo": "Ato Girma",
+    "status": "inactive"
+  },
+  {
+    "id": "CSE-2024-006",
+    "title": "Chemical Analysis - Arson Case",
+    "senderOrganization": "Police Station",
+    "investigationType": "Chemistry Investigation",
+    "assignedTo": "Dr. Meron",
+    "status": "active"
+  },
+  {
+    "id": "CSE-2024-007",
+    "title": "DNA Analysis - Paternity Case",
+    "senderOrganization": "Court",
+    "investigationType": "Biology Investigation",
+    "assignedTo": "Ato Girma",
+    "status": "inactive"
+  },
+  {
+    "id": "CSE-2024-008",
+    "title": "Fingerprint Analysis - Robbery Case",
+    "senderOrganization": "Police Station",
+    "investigationType": "Fingerprint Investigation",
+    "assignedTo": "Dr. Tadesse",
+    "status": "active"
+  }
+]
