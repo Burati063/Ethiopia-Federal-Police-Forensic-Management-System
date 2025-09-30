@@ -88,35 +88,35 @@
                     <div class="stat-card blue">
                         <div class="stat-card-content">
                             <i class="fas fa-folder-open stat-card-icon"></i>
-                            <h3>1k</h3>
+                            <h3>0</h3>
                             <p>Total Cases</p>
                         </div>
                     </div>
                     <div class="stat-card orange">
                         <div class="stat-card-content">
                             <i class="fas fa-clock stat-card-icon"></i>
-                            <h3>300</h3>
+                            <h3>0</h3>
                             <p>Pending Assignment</p>
                         </div>
                     </div>
                     <div class="stat-card green">
                         <div class="stat-card-content">
                             <i class="fas fa-check-circle stat-card-icon"></i>
-                            <h3>5</h3>
+                            <h3>0</h3>
                             <p>Completed Cases</p>
                         </div>
                     </div>
                     <div class="stat-card yellow">
                         <div class="stat-card-content">
                             <i class="fas fa-user-check stat-card-icon"></i>
-                            <h3>8</h3>
+                            <h3>0</h3>
                             <p>Assigned Cases</p>
                         </div>
                     </div>
                     <div class="stat-card purple">
                         <div class="stat-card-content">
                             <i class="fas fa-users stat-card-icon"></i>
-                            <h3>3</h3>
+                            <h3>0</h3>
                             <p>Active Investigators</p>
                         </div>
                     </div>
@@ -236,6 +236,14 @@
         </div>
     </div>
     <script src="script.js"></script>
-    <script src="logout.js"></script>
+    <script>
+    document.querySelector('.nav-item.logout').addEventListener('click', function(event) {
+        event.preventDefault();
+        if (confirm('Are you sure you want to logout?')) {
+            // Redirect to login page after logout
+            window.location.href = '../login.html';
+        }
+    });
+    </script>
 </body>
 </html>

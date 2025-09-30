@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval';">
     <title>Ethiopia Federal Police Forensic Management System</title>
     <link rel="stylesheet" href="style.css" />
 </head>
@@ -11,24 +12,30 @@
 <body>
     <div class="login-container">
         <!-- Logo -->
-        <img src="assets/Federal_Police_Commission_of_Ethiopia_Coat_of_Arms_and_Logo-removebg-preview.png" alt="System Logo" class="logo">
+        <div class="logo-placeholder" style="width: 80px; height: 80px; background-color: #2c3e50; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 24px;">EFPD</div>
 
         <!-- Title -->
         <h2>Ethiopia Federal Police<br>Forensic Management System</h2>
 
         <!-- Form -->
-        <form class="login-form" action="login.php" method="POST">
-            
+        <form class="login-form" id="loginForm">
+
             <label for="username">Username</label>
-            <input type="text" id="username" placeholder="Username" required />
+            <input type="text" id="username" name="username" placeholder="Username" required />
 
             <label for="password">Password</label>
             <div class="password-wrapper">
-                <input type="password" id="password" placeholder="Password" required />
+                <input type="password" id="password" name="password" placeholder="Password" required />
                 <span class="toggle-password" onclick="togglePassword()">👁</span>
             </div>
 
-          
+            <div class="test-credentials" style="margin-top: 15px; font-size: 14px; color: #eee; background-color: #333; padding: 10px; border-radius: 5px;">
+                <strong>Test Credentials:</strong><br/>
+                Admin: username <code>admin</code>, password <code>password123</code><br/>
+                Custodia Officer: username <code>custodia_user</code>, password <code>password123</code><br/>
+                Lab Technician: username <code>lab_user</code>, password <code>password123</code>
+            </div>
+
             <div class="remember">
                 <input type="checkbox" id="remember" />
                 <label for="remember">Remember me</label>
@@ -37,10 +44,37 @@
             <button type="submit" class="btn">Sign in</button>
         </form>
 
+        <script>
+            document.getElementById('loginForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+
+                // Mock role-based redirect logic for testing frontend navigation
+                if (username === 'admin' && password === 'password123') {
+                    window.location.href = 'admin/index.html';
+                } else if (username === 'custodia_user' && password === 'password123') {
+                    window.location.href = 'custodia/index.html';
+                } else if (username === 'lab_user' && password === 'password123') {
+                    window.location.href = 'custodia/index.html';
+                } else {
+                    alert('Invalid username or password for testing.');
+                }
+            });
+
+            function togglePassword() {
+                const passwordInput = document.getElementById('password');
+                if (passwordInput.type === 'password') {
+                    passwordInput.type = 'text';
+                } else {
+                    passwordInput.type = 'password';
+                }
+            }
+        </script>
+
         <p class="alt-link">Don't you have an account? <a href="register.html">Sign up</a></p>
     </div>
 
-    <script src="./js/script.js"></script>
 </body>
 
 </html>
