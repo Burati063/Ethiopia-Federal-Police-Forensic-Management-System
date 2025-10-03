@@ -1,53 +1,47 @@
 // Department classification data structure
-const departmentData = {
-    forensic: {
-        name: "Forensic Laboratory Department",
-        mainClasses: {
-            fingerprint: {
-                name: "Fingerprint & Crime Record Main Class",
-                classes: [
-                    "Peaceful People Fingerprint laboratory",
-                    "Digital Fingerprint Investigation laboratory",
-                    "Crime Record Fingerprint Investigation laboratory",
-                    "Hidden Fingerprint Investigation laboratory"
-                ]
-            },
-            biochemistry: {
-                name: "Forensic & Biochemistry Main Class",
-                classes: [
-                    "Fire and Explosion Investigation laboratory",
-                    "Chemistry and Toxicology Investigation laboratory",
-                    "Biology Investigation laboratory",
-                    "DNA Investigation laboratory"
-                ]
-            },
-            physical: {
-                name: "Physical Forensic Main Class",
-                classes: [
-                    "Weapon and Footprint laboratory",
-                    "Digital Investigation laboratory",
-                    " Document Investigation laboratory"
-                ]
-            }
-        }
-    },
-    crime: {
-        name: "Crime Area Investigation Department",
-        mainClasses: {
-            crime: {
-                name: "Crime Area Investigation Main Class",
-                classes: [
-                    "Cremation Investigation laboratory",
-                    "Crime Area Investigation laboratory",
-                    "Photography Investigation laboratory"
-                ]
-            }
-        }
-    }
-};
+let departmentData = {};
+let casesData = [];
+
+function loadDepartmentData() {
+    return fetch('departments.json')
+        .then(response => response.json())
+        .then(data => {
+            departmentData = data;
+        })
+        .catch(error => console.error('Error loading department data:', error));
+}
+
+function loadCasesData() {
+    return fetch('cases.json')
+        .then(response => response.json())
+        .then(data => {
+            casesData = data;
+            renderCases(casesData);
+        })
+        .catch(error => console.error('Error loading cases data:', error));
+}
+
+function renderCases(cases) {
+    const tbody = document.querySelector('.case-list table tbody');
+    tbody.innerHTML = '';
+    cases.forEach(caseItem => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${caseItem.id}</td>
+            <td>${caseItem.title}</td>
+            <td>${caseItem.senderOrganization}</td>
+            <td>${caseItem.investigationType}</td>
+            <td>${caseItem.assignedTo}</td>
+            <td><span class="status ${caseItem.status}">${caseItem.status.charAt(0).toUpperCase() + caseItem.status.slice(1)}</span></td>
+            <td><button class="action-btn"><i class="fas fa-eye"></i></button></td>
+        `;
+        tbody.appendChild(row);
+    });
+}
 
 // Modal functionality
 document.addEventListener('DOMContentLoaded', function() {
+    Promise.all([loadDepartmentData(), loadCasesData()]).then(() => {
     const modal = document.getElementById('newCaseModal');
     const registerCaseBtn = document.getElementById('registerCaseBtn');
     const cancelBtn = document.getElementById('cancelNewCase');
@@ -123,14 +117,30 @@ document.addEventListener('DOMContentLoaded', function() {
     const statusFilter = document.getElementById('statusFilter');
     const typeFilter = document.getElementById('typeFilter');
     const searchInput = document.getElementById('searchCase');
-    
+
     function applyFilters() {
         const statusValue = statusFilter.value;
         const typeValue = typeFilter.value;
         const searchValue = searchInput.value.toLowerCase();
-        
-        // In a real application, you would filter the table data here
-        console.log(`Filtering by status: ${statusValue}, type: ${typeValue}, search: ${searchValue}`);
+
+        let filteredCases = casesData;
+
+        if (statusValue !== 'all') {
+            filteredCases = filteredCases.filter(caseItem => caseItem.status === statusValue);
+        }
+
+        if (typeValue !== 'all') {
+            filteredCases = filteredCases.filter(caseItem => caseItem.investigationType.toLowerCase().includes(typeValue));
+        }
+
+        if (searchValue) {
+            filteredCases = filteredCases.filter(caseItem =>
+                caseItem.id.toLowerCase().includes(searchValue) ||
+                caseItem.title.toLowerCase().includes(searchValue)
+            );
+        }
+
+        renderCases(filteredCases);
     }
     
     statusFilter.addEventListener('change', applyFilters);
@@ -158,6 +168,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.log('Page changed to:', this.textContent);
             }
         });
+    });
     });
 });
 

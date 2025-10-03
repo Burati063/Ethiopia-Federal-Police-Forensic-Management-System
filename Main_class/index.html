@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/sidebar.css">
-    <link rel="stylesheet" href="../css/navbar.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dashboard - Main Class</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/sidebar.css" />
+    <link rel="stylesheet" href="../css/navbar.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
 <body>
     <div class="app-container">
@@ -15,10 +15,9 @@
         <aside class="sidebar">
             <div class="logo-container">
                 <div class="logo">
-                    <img src="../assets/Federal_Police_Commission_of_Ethiopia_Coat_of_Arms_and_Logo-removebg-preview.png" alt="ethiopia federal police logo">
+                    <img src="../assets/Federal_Police_Commission_of_Ethiopia_Coat_of_Arms_and_Logo-removebg-preview.png" alt="ethiopia federal police logo" />
                 </div>
             </div>
-            
             <nav class="nav-menu">
                 <a href="index.html" class="nav-item active">
                     <i class="fas fa-home"></i>
@@ -45,30 +44,24 @@
 
         <!-- Main Content Area -->
         <div class="main-content">
-            <!-- Navbar (with menu toggle removed) -->
+            <!-- Navbar -->
             <nav class="navbar">
-                <div class="navbar-left">
-                    <!-- Menu toggle removed -->
-                </div>
-                
+                <div class="navbar-left"></div>
                 <div class="navbar-center">
                     <div class="search-container">
-                        <input type="text" class="search-input" placeholder="Search here">
+                        <input type="text" class="search-input" placeholder="Search here" />
                         <i class="fas fa-search search-icon"></i>
                     </div>
                 </div>
-                
                 <div class="navbar-right">
                     <div class="notification-container">
                         <i class="fas fa-bell notification-icon"></i>
                         <span class="notification-badge"></span>
                     </div>
-                    
                     <div class="language-selector">
                         <i class="fas fa-globe"></i>
                         <span>English</span>
                     </div>
-                    
                     <div class="user-profile">
                         <i class="fas fa-user-circle"></i>
                         <span>User</span>
@@ -78,11 +71,11 @@
 
             <!-- Page Content -->
             <main class="page-content">
-               <div class="welcome-header">
-                   <h2>Welcome Back, Custodia Officer</h2>
-                   <h3>Ethiopia Federal Police Forensic Management System</h3>
-               </div> 
-               
+                <div class="welcome-header">
+                    <h2>Welcome Back, Main Class Officer</h2>
+                    <h3>Ethiopia Federal Police Forensic Management System</h3>
+                </div>
+
                 <!-- Dashboard Stats Cards with Icons -->
                 <div class="stats-cards">
                     <div class="stat-card blue">
@@ -121,7 +114,7 @@
                         </div>
                     </div>
                 </div>
-            
+
                 <!-- Case List Table -->
                 <div class="case-list">
                     <h3>Recent Case List</h3>
@@ -138,81 +131,10 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>CSE-2024-001</td>
-                                <td>Fingerprint Analysis</td>
-                                <td>Police Station</td>
-                                <td>Fingerprint Investigation</td>
-                                <td>2</td>
-                                <td><span class="status inlab">In Lab</span></td>
-                                <td>Dr. Tadesse</td>
-                            </tr>
-                            <tr>
-                                <td>CSE-2024-002</td>
-                                <td>DNA Analysis</td>
-                                <td>Court</td>
-                                <td>Biology Investigation</td>
-                                <td>2</td>
-                                <td><span class="status assigned">Assigned</span></td>
-                                <td>Ato Girma</td>
-                            </tr>
-                            <tr>
-                                <td>CSE-2024-003</td>
-                                <td>Document Forensics</td>
-                                <td>Police Station</td>
-                                <td>Biology Investigation</td>
-                                <td>1</td>
-                                <td><span class="status completed">Completed</span></td>
-                                <td>Dr. Tadesse</td>
-                            </tr>
-                            <tr>
-                                <td>CSE-2024-004</td>
-                                <td>DNA Analysis</td>
-                                <td>Court</td>
-                                <td>Document Investigation</td>
-                                <td>3</td>
-                                <td><span class="status inlab">In Lab</span></td>
-                                <td>Dr. Meron</td>
-                            </tr>
-                            <tr>
-                                <td>CSE-2024-005</td>
-                                <td>Document Forensics</td>
-                                <td>Court</td>
-                                <td>Document Investigation</td>
-                                <td>4</td>
-                                <td><span class="status assigned">Assigned</span></td>
-                                <td>Ato Girma</td>
-                            </tr>
-                            <tr>
-                                <td>CSE-2024-006</td>
-                                <td>Document Forensics</td>
-                                <td>Police Station</td>
-                                <td>Chemistry Investigation</td>
-                                <td>1</td>
-                                <td><span class="status completed">Completed</span></td>
-                                <td>Dr. Meron</td>
-                            </tr>
-                            <tr>
-                                <td>CSE-2024-007</td>
-                                <td>DNA Analysis</td>
-                                <td>Court</td>
-                                <td>Document Investigation</td>
-                                <td>1</td>
-                                <td><span class="status inlab">In Lab</span></td>
-                                <td>Ato Girma</td>
-                            </tr>
-                            <tr>
-                                <td>CSE-2024-008</td>
-                                <td>Fingerprint Analysis</td>
-                                <td>Police Station</td>
-                                <td>Biology Investigation</td>
-                                <td>2</td>
-                                <td><span class="status completed">Completed</span></td>
-                                <td>Dr. Tadesse</td>
-                            </tr>
+                            <!-- Placeholder for dynamic case rows -->
                         </tbody>
                     </table>
-                    
+
                     <!-- Pagination -->
                     <div class="pagination">
                         <button class="pagination-button disabled">
@@ -228,22 +150,19 @@
                         <button class="pagination-button">
                             <i class="fas fa-chevron-right"></i>
                         </button>
-                       
                     </div>
                 </div>
             </main>
-            
         </div>
     </div>
     <script src="script.js"></script>
     <script>
-    document.querySelector('.nav-item.logout').addEventListener('click', function(event) {
-        event.preventDefault();
-        if (confirm('Are you sure you want to logout?')) {
-            // Redirect to login page after logout
-            window.location.href = '../login.html';
-        }
-    });
+        document.querySelector('.nav-item.logout').addEventListener('click', function (event) {
+            event.preventDefault();
+            if (confirm('Are you sure you want to logout?')) {
+                window.location.href = '../login.html';
+            }
+        });
     </script>
 </body>
 </html>
